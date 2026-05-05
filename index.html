@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Kletser — De Gezelligste Kroeg Van Gent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════
+       CSS CUSTOM PROPERTIES  (matching Squarespace source)
+    ═══════════════════════════════════ */
+    :root {
+      /* De Kletser brand palette */
+      --accent:  #B5522A;   /* terracotta      */
+      --cream:   #F5F0E8;   /* warm cream      */
+      --dark:    #1E130C;   /* espresso        */
+      --mocha:   #7A4035;   /* deep mocha      */
+      --sand:    #D4B98A;   /* sandy beige     */
+      --blush:   #FDF6EE;   /* soft blush      */
+
+      /* Typography */
+      --base-font-size: 24px;
+
+      /* Layout */
+      --site-gutter:   4vw;
+      --site-max-width: 1427px;
+    }
+
+    /* ═══════════════════════════════════
+       RESET / BASE
+    ═══════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      font-size: var(--base-font-size);
+      scroll-behavior: smooth;
+    }
+    @media screen and (max-width: 991px) {
+      html { font-size: min(var(--base-font-size), 16px); }
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: capitalize;
+      letter-spacing: 0.06em;
+      line-height: 1.5em;
+      color: var(--dark);
+      background-color: var(--cream);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      overflow-x: hidden;
+    }
+
+    /* Headings — Alegreya Sans, uppercase */
+    h1, h2, h3, h4 {
+      font-family: 'Alegreya Sans', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1.2em;
+    }
+    h1 { font-size: 4rem; }
+    h2 { font-size: 2.8rem; }
+    h3 { font-size: 2.2rem; }
+    h4 { font-size: 1.6rem; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: clamp(2.25rem, 8vw, 4rem); }
+      h2 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+    }
+
+    /* ═══════════════════════════════════
+       TILE BACKGROUND  (hero + nav)
+    ═══════════════════════════════════ */
+    /*
+      Each SVG "stamp" is 100×100px and contains four 47×47px tiles
+      in slightly varying rust-red shades, separated by 2px grout lines
+      in near-black.  A subtle white ellipse gives each tile a soft glaze.
+    */
+    .tile-bg {
+      /* De Kletser tiles: terracotta + mocha tones, espresso grout */
+      background-color: #B5522A;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%230E0807'/%3E%3Crect x='1' y='1' width='47' height='47' fill='%23B55028'/%3E%3Cellipse cx='17' cy='13' rx='15' ry='9' fill='%23ffffff' opacity='0.045'/%3E%3Crect x='52' y='1' width='47' height='47' fill='%237A4035'/%3E%3Cellipse cx='68' cy='13' rx='14' ry='8' fill='%23ffffff' opacity='0.05'/%3E%3Crect x='1' y='52' width='47' height='47' fill='%23A84C26'/%3E%3Cellipse cx='17' cy='64' rx='15' ry='8' fill='%23ffffff' opacity='0.04'/%3E%3Crect x='52' y='52' width='47' height='47' fill='%238A3D2E'/%3E%3Cellipse cx='68' cy='64' rx='14' ry='8' fill='%23ffffff' opacity='0.06'/%3E%3C/svg%3E");
+      background-size: 100px 100px;
+    }
+
+    /* ═══════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem var(--site-gutter);
+      transition: background 0.35s ease;
+    }
+    #nav.scrolled {
+      background: rgba(30,19,12,0.93);   /* --dark espresso */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Circular logo badge — De Kletser logo shown in original colours */
+    .logo-badge {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: #F5F0E8;          /* cream bg so logo shows naturally */
+      box-shadow: 0 2px 14px rgba(0,0,0,0.3), 0 0 0 1.5px rgba(245,240,232,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex-shrink: 0;
+    }
+    .logo-badge:hover {
+      transform: scale(1.06);
+      box-shadow: 0 4px 22px rgba(0,0,0,0.4), 0 0 0 2px rgba(245,240,232,0.5);
+    }
+    .logo-badge img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Nav right area */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.75);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: #F5F0E8; }
+
+    /* ═══════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════ */
+    .btn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      padding: 0.7em 1.9em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      border: none;
+    }
+    .btn:hover  { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+    /* White/cream outlined button */
+    .btn-outline-light {
+      background: transparent;
+      color: #F5F0E8;
+      border: 1.5px solid rgba(245,240,232,0.65);
+    }
+    .btn-outline-light:hover {
+      background: rgba(245,240,232,0.1);
+      border-color: #F5F0E8;
+    }
+
+    /* Cream filled */
+    .btn-cream {
+      background: #F5F0E8;
+      color: var(--accent);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+    .btn-cream:hover {
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Rust filled */
+    .btn-rust {
+      background: var(--accent);
+      color: #F5F0E8;
+    }
+    .btn-rust:hover { background: #7A4035; }  /* --mocha */
+
+    /* Dark outlined on cream bg */
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid var(--dark);
+    }
+    .btn-outline-dark:hover {
+      background: var(--dark);
+      color: #F5F0E8;
+    }
+
+    /* ═══════════════════════════════════
+       HERO
+    ═══════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 9rem var(--site-gutter) 6rem;
+      position: relative;
+    }
+    .hero::after {
+      /* Subtle dark vignette at edges for depth */
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 80% at 50% 50%, transparent 40%, rgba(0,0,0,0.3) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+    .hero h1 {
+      color: #F5F0E8;
+      margin-bottom: 1rem;
+    }
+    .hero .sub {
+      color: rgba(245,240,232,0.82);
+      font-size: 1rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 0.06em;
+    }
+
+    /* ═══════════════════════════════════
+       TWO-COLUMN SECTIONS  (full-width, edge-to-edge)
+    ═══════════════════════════════════ */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 580px;
+    }
+    .split-photo {
+      overflow: hidden;
+      position: relative;
+    }
+    .split-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s cubic-bezier(0.4,0,0.2,1);
+    }
+    .split-photo:hover img { transform: scale(1.04); }
+
+    .split-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: clamp(3rem, 7vw, 7rem) clamp(2rem, 6vw, 7rem);
+    }
+
+    /* Eye-label above headings */
+    .eyebrow {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* Body paragraph inside split sections */
+    .split-content p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+      text-transform: none;
+      letter-spacing: 0.03em;
+    }
+
+    /* ═══════════════════════════════════
+       GALLERY  ("Oké, éentje dan!")
+    ═══════════════════════════════════ */
+    .gallery-section {
+      padding: clamp(4rem, 7vw, 7rem) var(--site-gutter);
+      background: var(--cream);
+    }
+    .gallery-header {
+      margin-bottom: 2.5rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* ═══════════════════════════════════
+       CONTACT
+    ═══════════════════════════════════ */
+    .contact-section {
+      padding: clamp(4rem, 7vw, 7rem) var(--site-gutter);
+      background: var(--cream);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: start;
+      max-width: var(--site-max-width);
+      margin: 0 auto;
+    }
+    .contact-info h2 {
+      margin-bottom: 1.75rem;
+    }
+    .contact-info address {
+      font-style: normal;
+      font-size: 0.85rem;
+      line-height: 2;
+      text-transform: none;
+      letter-spacing: 0.03em;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+    }
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-info a:hover { opacity: 0.75; }
+
+    .contact-photo {
+      overflow: hidden;
+      aspect-ratio: 5/4;
+    }
+    .contact-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ═══════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════ */
+    footer {
+      background: var(--dark);
+      color: #F5F0E8;
+      padding: 3.5rem var(--site-gutter) 2.5rem;
+    }
+    .footer-inner {
+      max-width: var(--site-max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(245,240,232,0.1);
+    }
+    .footer-col h4 {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      color: #F5F0E8;
+    }
+    .footer-col p, .footer-col address {
+      font-size: 0.7rem;
+      line-height: 1.9;
+      text-transform: none;
+      letter-spacing: 0.04em;
+      color: rgba(245,240,232,0.5);
+      font-style: normal;
+    }
+    .footer-col a {
+      color: rgba(245,240,232,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #F5F0E8; }
+    .footer-bottom {
+      max-width: var(--site-max-width);
+      margin: 2rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p {
+      font-size: 0.6rem;
+      text-transform: none;
+      letter-spacing: 0.06em;
+      color: rgba(245,240,232,0.25);
+    }
+
+    /* ═══════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════ */
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .split-photo { aspect-ratio: 4/3; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .nav-right .nav-link { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════ -->
+<nav id="nav">
+
+  <!-- De Kletser logo badge -->
+  <a href="#" class="logo-badge" aria-label="De Kletser — Home">
+    <img src="brand_assets/image.png" alt="De Kletser">
+  </a>
+
+  <!-- Right side nav -->
+  <div class="nav-right">
+    <a href="#over" class="nav-link">Over Ons</a>
+    <a href="#gallery" class="nav-link">Sfeer</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#contact" class="btn btn-outline-light" style="font-size:0.72rem; letter-spacing:0.08em; padding:0.55em 1.4em;">Reserveer</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════
+     HERO  —  tile texture, centered heading
+═══════════════════════════════════ -->
+<section class="hero tile-bg">
+  <div class="hero-inner">
+    <h1>De Gezelligste<br>Kroeg Van Gent</h1>
+    <p class="sub" style="margin-top:0.75rem;">
+      Waar Elk Gesprek Begint.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SPLIT A  —  photo left / content right (rust)
+═══════════════════════════════════ -->
+<section id="over" class="split">
+
+  <!-- Left: photo -->
+  <div class="split-photo">
+    <img
+      src="https://placehold.co/900x700/7A4035/F5F0E8?text=De+Kletser"
+      alt="De Kletser exterieur Gent">
+  </div>
+
+  <!-- Right: content on terracotta background -->
+  <div class="split-content" style="background:var(--accent);">
+    <span class="eyebrow" style="color:rgba(245,240,232,0.55);">De Kletser</span>
+    <h2 style="color:#F5F0E8;">Wat Onze Gasten<br>Zeggen</h2>
+    <p style="color:rgba(245,240,232,0.82);">
+      De Kletser is een plek waar iedereen welkom is. Een gezellige kroeg in het hart van Gent, waar je altijd een goed gesprek vindt en een nóg beter glas bier. Kom binnen, ga zitten, en voel je thuis.
+    </p>
+    <div>
+      <a href="#contact" class="btn btn-cream">Reserveer</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SPLIT B  —  content left (cream) / photo right
+═══════════════════════════════════ -->
+<section class="split">
+
+  <!-- Left: content on cream background -->
+  <div class="split-content" style="background:var(--cream);">
+    <h2 style="color:var(--dark);">Een Stamkroeg<br>Met Karakter</h2>
+    <p style="color:var(--dark);">
+      De Kletser is een plek voor stamgasten van vroeger, nieuwkomers van nu en iedereen daartussenin. Elke dag staan we klaar met een koud biertje of een verse koffie en een warm welkom. Gevestigd in Gent — open voor iedereen die een échte gezellige kroeg zoekt.
+    </p>
+    <div>
+      <a href="#contact" class="btn btn-outline-dark">Kom Langs</a>
+    </div>
+  </div>
+
+  <!-- Right: photo -->
+  <div class="split-photo">
+    <img
+      src="https://placehold.co/900x700/D4B98A/1E130C?text=Interieur"
+      alt="De Kletser interieur — biertje op de bar">
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     GALLERY  —  "Oké, éentje dan!"
+═══════════════════════════════════ -->
+<section id="gallery" class="gallery-section">
+  <div style="max-width:var(--site-max-width); margin:0 auto;">
+
+    <div class="gallery-header">
+      <h2 style="color:var(--dark);">Oké, Éentje Dan!</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img
+          src="https://placehold.co/560x740/B5522A/F5F0E8?text=Feest"
+          alt="Feest bij De Kletser">
+      </div>
+      <div class="gallery-item">
+        <img
+          src="https://placehold.co/560x740/7A4035/F5F0E8?text=Bier"
+          alt="Bier bij De Kletser">
+      </div>
+      <div class="gallery-item">
+        <img
+          src="https://placehold.co/560x740/D4B98A/1E130C?text=Sfeer"
+          alt="Sfeer bij De Kletser">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     CONTACT
+═══════════════════════════════════ -->
+<section id="contact" class="contact-section" style="background:var(--cream); border-top:1px solid rgba(28,28,28,0.08);">
+  <div class="contact-grid">
+
+    <!-- Left: contact info -->
+    <div class="contact-info">
+      <h2 style="color:var(--dark);">Contact</h2>
+
+      <address>
+        De Kletser<br>
+        Voorbeeldstraat 12<br>
+        9000 Gent, België<br>
+        <br>
+        <a href="tel:+3291234567">+32 9 123 45 67</a><br>
+        <a href="mailto:hallo@dekletser.be">hallo@dekletser.be</a>
+      </address>
+
+      <p style="font-size:0.8rem; text-transform:none; letter-spacing:0.03em; color:rgba(30,19,12,0.65); margin-bottom:1.75rem;">
+        De Kletser is elke dag geopend van 10:00 tot sluitingstijd. Loop gewoon binnen of stuur ons een berichtje voor een grotere reservering.
+      </p>
+
+      <a href="mailto:hallo@dekletser.be" class="btn btn-rust">Stuur Een Bericht</a>
+    </div>
+
+    <!-- Right: photo -->
+    <div class="contact-photo">
+      <img
+        src="https://placehold.co/700x560/7A4035/F5F0E8?text=De+Kletser+Events"
+        alt="Events bij De Kletser">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+
+    <!-- Col 1: Brand + logo -->
+    <div class="footer-col">
+      <img src="brand_assets/image.png" alt="De Kletser"
+           style="height:52px; width:auto; filter:brightness(0) invert(1); opacity:0.75; display:block; margin-bottom:1rem;">
+      <address>
+        Voorbeeldstraat 12<br>
+        9000 Gent, België
+      </address>
+    </div>
+
+    <!-- Col 2: Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>
+        <a href="tel:+3291234567">+32 9 123 45 67</a><br>
+        <a href="mailto:hallo@dekletser.be">hallo@dekletser.be</a>
+      </p>
+    </div>
+
+    <!-- Col 3: Reserve -->
+    <div class="footer-col" style="display:flex; flex-direction:column; justify-content:flex-start; gap:1rem;">
+      <h4>Reserveer Een Tafel</h4>
+      <p>Voor grotere groepen of een speciale gelegenheid, neem contact op of stuur ons een mail.</p>
+      <a href="mailto:hallo@dekletser.be" class="btn btn-outline-light" style="width:fit-content; margin-top:0.5rem;">Reserveer</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 De Kletser — Alle rechten voorbehouden</p>
+    <p>Voorbeeldstraat 12 · Gent</p>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+<script>
+  // Sticky nav: add background after scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
+
+  // Mobile: hide nav text links if viewport narrow enough — handled via CSS
+</script>
+</body>
+</html>
