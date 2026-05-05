@@ -490,6 +490,59 @@ footer {
   color: rgba(245,240,232,0.35);
   letter-spacing: 0.05em;
 }
+/* ── Social media icons ── */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: rgba(245,240,232,0.6);
+  border: 1px solid rgba(245,240,232,0.15);
+  border-radius: 50%;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.social-links a:hover {
+  color: var(--cream);
+  border-color: rgba(245,240,232,0.5);
+  background: rgba(245,240,232,0.08);
+  transform: translateY(-2px);
+}
+.social-links a:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Footer variant — smaller, centered */
+.social-links--footer {
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.social-links--footer a {
+  width: 34px;
+  height: 34px;
+  color: rgba(245,240,232,0.4);
+  border-color: rgba(245,240,232,0.1);
+}
+.social-links--footer a:hover {
+  color: var(--cream);
+  border-color: rgba(245,240,232,0.4);
+}
+.social-links--footer svg {
+  width: 16px;
+  height: 16px;
+}
+
 .footer-copy {
   font-size: 0.68rem !important;
   color: rgba(245,240,232,0.2) !important;
