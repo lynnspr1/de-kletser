@@ -523,6 +523,31 @@ footer {
   height: 18px;
 }
 
+/* Nav variant — inline in de navigatiebalk */
+.social-links--nav {
+  margin-top: 0;
+  margin-left: 0.5rem;
+  gap: 0.5rem;
+  border-left: 1px solid rgba(245,240,232,0.15);
+  padding-left: 1.5rem;
+}
+.social-links--nav a {
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: rgba(245,240,232,0.6);
+}
+.social-links--nav a:hover {
+  background: transparent;
+  border: none;
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+.social-links--nav svg {
+  width: 16px;
+  height: 16px;
+}
+
 /* Footer variant — smaller, centered */
 .social-links--footer {
   justify-content: center;
@@ -596,6 +621,23 @@ footer {
   .nav-link {
     font-size: 1.1rem;
     color: rgba(245,240,232,0.85);
+  }
+  .social-links--nav {
+    border-left: none;
+    border-top: 1px solid rgba(245,240,232,0.1);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    margin-left: 0;
+    gap: 1rem;
+  }
+  .social-links--nav a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(245,240,232,0.15);
+  }
+  .social-links--nav svg {
+    width: 18px;
+    height: 18px;
   }
   .hero-logo { width: clamp(200px, 72vw, 340px); }
 }
