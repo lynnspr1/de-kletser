@@ -31,8 +31,8 @@
   <meta name="twitter:image" content="https://www.dekletser.nl/brand_assets/foto-bas-menno.jpeg">
 
   <!-- ── Favicon ── -->
-  <link rel="icon" type="image/png" href="/brand_assets/logo-badge.png">
-  <link rel="apple-touch-icon" href="/brand_assets/logo-badge.png">
+  <link rel="icon" type="image/png" href="/brand_assets/logo-badge-opt.png">
+  <link rel="apple-touch-icon" href="/brand_assets/logo-badge-opt.png">
 
   <!-- ── Structured data (Google rich results) ── -->
   <script type="application/ld+json">
@@ -93,7 +93,10 @@
 ══════════════════════════════ -->
 <nav id="nav">
   <a href="#home" class="nav-logo" aria-label="De Kletser — Home">
-    <img src="/brand_assets/logo-wordmark.png" alt="De Kletser">
+    <picture>
+      <source srcset="/brand_assets/logo-wordmark.webp" type="image/webp">
+      <img src="/brand_assets/logo-wordmark-opt.png" alt="De Kletser" width="400" height="144" fetchpriority="high">
+    </picture>
   </a>
 
   <div class="nav-links" id="nav-links">
@@ -127,10 +130,10 @@
 ══════════════════════════════ -->
 <section id="home" class="hero tile-bg">
   <div class="hero-inner">
-    <img
-      class="hero-logo"
-      src="/brand_assets/logo-wordmark.png"
-      alt="De Kletser">
+    <picture>
+      <source srcset="/brand_assets/logo-wordmark.webp" type="image/webp">
+      <img class="hero-logo" src="/brand_assets/logo-wordmark-opt.png" alt="De Kletser — café in Horst" width="400" height="144" fetchpriority="high">
+    </picture>
 
     <p class="hero-sub">
       Kom langs voor koffie, wat lekkers of een borrel<br>
@@ -149,9 +152,10 @@
   <div class="over-inner">
 
     <div class="over-photo">
-      <img
-        src="/brand_assets/foto-bas-menno.jpeg"
-        alt="Bas van der Sterren en Menno Tros — De Kletser, Horst">
+      <picture>
+        <source srcset="/brand_assets/foto-bas-menno.webp" type="image/webp">
+        <img src="/brand_assets/foto-bas-menno-opt.jpeg" alt="Bas van der Sterren en Menno Tros, eigenaren van café De Kletser in Horst" width="900" height="1200" loading="lazy">
+      </picture>
     </div>
 
     <div class="over-content">
@@ -231,14 +235,26 @@
 
     <!-- Openingstijden -->
     <div class="contact-hours">
-      <h3>Openingstijden</h3>
+
+      <div class="hours-summer">
+        <h3>Zomeropeningstijden</h3>
+        <p class="hours-summer-text">In de zomer zijn we elke dag geopend vanaf 14:00 uur!</p>
+      </div>
+
+      <h3>Reguliere openingstijden</h3>
       <table class="hours-table">
         <tbody>
-          <tr><td>Dinsdag</td><td>Vanaf 10:00</td></tr>
-          <tr><td>Donderdag &amp; vrijdag</td><td>Vanaf 14:00</td></tr>
-          <tr><td>Zaterdag &amp; zondag</td><td>Vanaf 12:00</td></tr>
+          <tr><td>Dinsdag</td><td>09:00 – 12:00<br>19:00 – 01:00</td></tr>
+          <tr><td>Woensdag</td><td>19:00 – 01:00</td></tr>
+          <tr><td>Donderdag</td><td>19:00 – 01:00</td></tr>
+          <tr><td>Vrijdag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Zaterdag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Zondag</td><td>12:00 – 01:00</td></tr>
         </tbody>
       </table>
+
+      <p class="hours-note">Openingstijden kunnen tijdens evenementen of feestdagen afwijken.</p>
+
     </div>
 
   </div>
@@ -250,7 +266,10 @@
 ══════════════════════════════ -->
 <footer>
   <div class="footer-inner">
-    <img class="footer-logo" src="/brand_assets/logo-wordmark.png" alt="De Kletser">
+    <picture>
+      <source srcset="/brand_assets/logo-wordmark.webp" type="image/webp">
+      <img class="footer-logo" src="/brand_assets/logo-wordmark-opt.png" alt="De Kletser" width="400" height="144" loading="lazy">
+    </picture>
 
     <div class="social-links social-links--footer">
       <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
