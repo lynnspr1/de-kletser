@@ -5,7 +5,8 @@
       "Bash(npm --version)",
       "Read(//Users/lynn/dekletser/**)",
       "Bash(npm install *)",
-      "Bash(find /Users/lynn/ -maxdepth 4 -name *.html -o -name serve*.mjs -o -name serve*.js)"
+      "Bash(find /Users/lynn/ -maxdepth 4 -name *.html -o -name serve*.mjs -o -name serve*.js)",
+      "Bash(npm run *)"
     ]
   }
 }

@@ -243,8 +243,6 @@ img { display: block; max-width: 100%; }
   background: var(--blush);
 }
 .over-inner {
-  max-width: var(--max);
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 560px;
@@ -277,7 +275,8 @@ img { display: block; max-width: 100%; }
 }
 
 .over-content {
-  padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
+  padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem) clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -490,6 +489,8 @@ footer {
   .over-inner {
     grid-template-columns: 1fr;
     min-height: auto;
+    width: 100%;
+    overflow: hidden;
   }
   .over-photo {
     border-right: none;
