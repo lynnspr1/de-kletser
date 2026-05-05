@@ -382,6 +382,14 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.02em;
 }
 
+.menu-coming-soon {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(30,19,12,0.72);
+  max-width: 560px;
+  margin-top: 1rem;
+}
+
 /* ═══════════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════════ */
