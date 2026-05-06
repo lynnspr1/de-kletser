@@ -520,6 +520,97 @@ img { display: block; max-width: 100%; }
 }
 
 /* ═══════════════════════════════════════════
+   INSTAGRAM GRID
+═══════════════════════════════════════════ */
+.insta-section {
+  background: var(--blush);
+  padding: clamp(4rem, 7vw, 7rem) var(--pad);
+  border-top: 1px solid rgba(212,185,138,0.3);
+}
+.insta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.insta-header {
+  margin-bottom: 2.5rem;
+}
+.insta-header h2 {
+  color: var(--espresso);
+  margin-bottom: 0.6rem;
+}
+.insta-sub {
+  font-size: 0.95rem;
+  color: rgba(30,19,12,0.55);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.insta-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+  aspect-ratio: 1 / 1;
+  background: var(--sand);
+}
+.insta-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.insta-tile:hover img {
+  transform: scale(1.06);
+}
+.insta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30,19,12,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.insta-overlay svg {
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.insta-tile:hover .insta-overlay {
+  background: rgba(30,19,12,0.38);
+}
+.insta-tile:hover .insta-overlay svg {
+  opacity: 1;
+  transform: scale(1);
+}
+.insta-tile:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.insta-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .insta-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .insta-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════
    WERKEN BIJ — pagina-specifieke stijlen
 ═══════════════════════════════════════════ */
 
