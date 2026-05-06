@@ -520,6 +520,140 @@ img { display: block; max-width: 100%; }
 }
 
 /* ═══════════════════════════════════════════
+   WERKEN BIJ — pagina-specifieke stijlen
+═══════════════════════════════════════════ */
+
+/* Active nav link */
+.nav-link--active {
+  color: var(--cream) !important;
+  border-bottom: 1px solid rgba(245,240,232,0.4);
+  padding-bottom: 1px;
+}
+
+/* Hero (smaller than homepage hero) */
+.jobs-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem var(--pad) 5rem;
+  position: relative;
+}
+.jobs-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 25%, rgba(15,5,2,0.45) 100%);
+  pointer-events: none;
+}
+.jobs-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+.jobs-hero h1 {
+  color: var(--cream);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+
+/* General content section */
+.jobs-section {
+  padding: clamp(4rem, 7vw, 7rem) var(--pad);
+}
+.jobs-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.jobs-section h2 {
+  color: var(--espresso);
+  margin-bottom: 1.5rem;
+}
+.jobs-section p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(30,19,12,0.72);
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+.jobs-section .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+/* Two-column split */
+.jobs-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+.jobs-block h3 {
+  font-size: 1.5rem;
+  color: var(--terracotta);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid rgba(181,82,42,0.2);
+}
+.jobs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.jobs-list li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(30,19,12,0.75);
+  padding-left: 1.25rem;
+  position: relative;
+}
+.jobs-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+/* CTA section */
+.jobs-cta {
+  background: var(--espresso);
+  padding: clamp(4rem, 7vw, 7rem) var(--pad);
+}
+.jobs-cta-inner {
+  max-width: 640px;
+}
+.jobs-cta h2 {
+  color: var(--cream);
+  margin-bottom: 1.25rem;
+}
+.jobs-cta p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(245,240,232,0.68);
+  margin-bottom: 2rem;
+}
+.jobs-cta-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .jobs-two-col {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .jobs-hero { min-height: 55vh; }
+}
+
+/* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
 footer {
