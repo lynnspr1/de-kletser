@@ -362,6 +362,7 @@ img { display: block; max-width: 100%; }
   transform: translateY(-2px);
 }
 
+.menu-card-heading,
 .menu-card h3 {
   font-size: 1.3rem;
   color: var(--terracotta);

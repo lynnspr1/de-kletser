@@ -5,24 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ── Primary SEO ── -->
-  <title>Werken bij De Kletser | Vacatures café Horst</title>
-  <meta name="title" content="Werken bij De Kletser | Vacatures café Horst">
-  <meta name="description" content="Kom werken bij De Kletser in Horst! We zoeken enthousiaste barmedewerkers voor de gezelligste kroeg van Horst. Stuur een berichtje en wie weet zie je je snel achter de bar.">
+  <title>Contact & openingstijden | Café De Kletser Horst</title>
+  <meta name="title" content="Contact & openingstijden | Café De Kletser Horst">
+  <meta name="description" content="Café De Kletser is gevestigd op het Wilhelminaplein 13 in Horst. Bekijk onze openingstijden, neem contact op of volg ons op social media.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.dekletser.nl/werken-bij">
+  <meta name="language" content="nl">
+  <link rel="canonical" href="https://www.dekletser.nl/contact">
 
   <!-- ── Open Graph ── -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.dekletser.nl/werken-bij">
+  <meta property="og:url" content="https://www.dekletser.nl/contact">
   <meta property="og:site_name" content="De Kletser">
   <meta property="og:locale" content="nl_NL">
-  <meta property="og:title" content="Werken bij De Kletser | Horst">
-  <meta property="og:description" content="Kom werken bij De Kletser — de gezelligste kroeg van Horst. We zoeken enthousiaste mensen die van aanpakken weten.">
+  <meta property="og:title" content="Contact & openingstijden | De Kletser Horst">
+  <meta property="og:description" content="Café De Kletser op het Wilhelminaplein in Horst. Bekijk openingstijden en neem contact op.">
   <meta property="og:image" content="https://www.dekletser.nl/brand_assets/foto-bas-menno.jpeg">
+
+  <!-- ── Twitter / X ── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact & openingstijden | De Kletser Horst">
+  <meta name="twitter:description" content="Café De Kletser op het Wilhelminaplein in Horst. Bekijk openingstijden en neem contact op.">
+  <meta name="twitter:image" content="https://www.dekletser.nl/brand_assets/foto-bas-menno.jpeg">
 
   <!-- ── Favicon ── -->
   <link rel="icon" type="image/png" href="/brand_assets/logo-badge-opt.png">
   <link rel="apple-touch-icon" href="/brand_assets/logo-badge-opt.png">
+
+  <!-- ── Structured data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "De Kletser",
+    "description": "Gezellig café en stamkroeg op het Wilhelminaplein in Horst.",
+    "url": "https://www.dekletser.nl",
+    "email": "dekletser@outlook.com",
+    "image": "https://www.dekletser.nl/brand_assets/foto-bas-menno.jpeg",
+    "logo": "https://www.dekletser.nl/brand_assets/logo-badge.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Wilhelminaplein 13",
+      "addressLocality": "Horst",
+      "postalCode": "5961 ES",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Thursday","Friday","Saturday"], "opens": "14:00", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday"], "opens": "09:00", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "12:00", "closes": "01:00" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/cafedekletser",
+      "https://www.facebook.com/proeflokaalvanhorst/",
+      "https://www.tiktok.com/@cafedekletser"
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +74,7 @@
      ANNOUNCEMENT BAR
 ══════════════════════════════ -->
 <div class="announcement-bar">
-  <a href="/#contact" class="announcement-link">
+  <a href="/contact" class="announcement-link">
     <span class="announcement-icon">☀️</span>
     Deze zomer extra vaak geopend
   </a>
@@ -56,8 +94,8 @@
   <div class="nav-links" id="nav-links">
     <a href="/"            class="nav-link">Home</a>
     <a href="/menu"        class="nav-link">Menu</a>
-    <a href="/contact"     class="nav-link">Contact</a>
-    <a href="/werken-bij"  class="nav-link nav-link--active">Werken bij</a>
+    <a href="/contact"     class="nav-link nav-link--active">Contact</a>
+    <a href="/werken-bij"  class="nav-link">Werken bij</a>
 
     <div class="social-links social-links--nav">
       <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -81,91 +119,61 @@
 
 
 <!-- ══════════════════════════════
-     HERO
+     CONTACT
 ══════════════════════════════ -->
-<section class="jobs-hero tile-bg">
-  <div class="jobs-hero-inner">
-    <span class="eyebrow" style="color: rgba(245,240,232,0.55);">Vacatures</span>
-    <h1>Kom werken bij<br>De Kletser</h1>
-    <p class="hero-sub">
-      We zoeken enthousiaste mensen die van aanpakken weten<br>
-      en die de gezelligste kroeg van Horst nog gezelliger maken.
-    </p>
-    <a href="#solliciteer" class="btn btn-cream">Direct solliciteren</a>
-  </div>
-</section>
+<section class="contact-section" style="padding-top: clamp(8rem, 12vw, 11rem);">
+  <div class="contact-inner">
 
+    <!-- Adres & contact -->
+    <div class="contact-info">
+      <span class="eyebrow">Vind ons</span>
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); font-family: 'Alegreya Sans', sans-serif; font-weight: 700; color: var(--cream); margin-bottom: 1.5rem;">Contact &amp; adres</h1>
+      <address>
+        Wilhelminaplein 13<br>
+        5961 ES Horst
+      </address>
+      <div class="contact-links">
+        <a href="tel:+31612345678">+31 6 12 34 56 78</a>
+        <a href="mailto:dekletser@outlook.com">dekletser@outlook.com</a>
+      </div>
 
-<!-- ══════════════════════════════
-     INTRO
-══════════════════════════════ -->
-<section class="jobs-section" style="background: var(--blush);">
-  <div class="jobs-inner">
-    <span class="eyebrow">Werken bij De Kletser</span>
-    <h2>Een plek waar jij<br>het verschil maakt</h2>
-    <p>
-      De Kletser is de plek waar Horst samenkomt en jij staat daar middenin. Je werkt hier niet alleen, maar samen met een gezellig team tussen de mensen, de drukte en de sfeer. Van volle terrassen tot lange avonden aan de bar.
-    </p>
-    <p>
-      We zijn nog maar net begonnen, dus je groeit vanaf het begin met ons mee. Veel lachen, aanpakken en samen iets moois neerzetten. Ervaring is mooi meegenomen, maar niet nodig. Als jij energie hebt en graag tussen de mensen staat, dan horen we graag van je.
-    </p>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     WIE ZOEKEN WE + WAT BIEDEN WIJ
-══════════════════════════════ -->
-<section class="jobs-section jobs-section--split" style="background: var(--cream);">
-  <div class="jobs-inner jobs-two-col">
-
-    <div class="jobs-block">
-      <h3>Wie zoeken we?</h3>
-      <ul class="jobs-list">
-        <li>Enthousiaste barmedewerkers, uren in overleg</li>
-        <li>Je bent vriendelijk, gastvrij en neemt initiatief</li>
-        <li>Je voelt je thuis in een drukke, gezellige omgeving</li>
-        <li>Je bent beschikbaar in de avonden en/of het weekend</li>
-        <li>Ervaring is fijn maar enthousiasme is het belangrijkste</li>
-        <li>Je bent minimaal 18 jaar</li>
-      </ul>
+      <div class="social-links">
+        <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/proeflokaalvanhorst/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@cafedekletser?_r=1&_t=ZG-95Vpi0ySQYT&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnl-PssM-K5PHSwo9crOva-SW37HE3c37mLm_ooIB8N7fNUlMYQF7Bwu2Thxc_aem_GePVV2t2chXgPjhhZ7CNOg" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        </a>
+      </div>
     </div>
 
-    <div class="jobs-block">
-      <h3>Wat bieden wij?</h3>
-      <ul class="jobs-list">
-        <li>Een gezellige werkplek met een jong team</li>
-        <li>Flexibele uren die passen bij jouw agenda</li>
-        <li>Een lekker salaris</li>
-        <li>Ruimte om te groeien en jezelf te ontwikkelen</li>
-        <li>Een drankje na je dienst, dat spreekt voor zich</li>
-        <li>Werken op één van de leukste plekken van Horst</li>
-      </ul>
+    <!-- Openingstijden -->
+    <div class="contact-hours">
+
+      <div class="hours-summer">
+        <h3>☀️ Zomeropeningstijden</h3>
+        <p class="hours-summer-text">Deze zomer zijn we extra vaak geopend.</p>
+      </div>
+
+      <table class="hours-table">
+        <tbody>
+          <tr><td>Maandag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Dinsdag</td><td>09:00 – 01:00</td></tr>
+          <tr><td>Woensdag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Donderdag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Vrijdag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Zaterdag</td><td>14:00 – 01:00</td></tr>
+          <tr><td>Zondag</td><td>12:00 – 01:00</td></tr>
+        </tbody>
+      </table>
+
+      <p class="hours-note">Openingstijden kunnen tijdens evenementen of feestdagen afwijken.</p>
+
     </div>
 
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     CTA / SOLLICITEREN
-══════════════════════════════ -->
-<section id="solliciteer" class="jobs-cta">
-  <div class="jobs-inner jobs-cta-inner">
-    <span class="eyebrow" style="color: rgba(245,240,232,0.45);">Interesse?</span>
-    <h2>Stuur ons een berichtje</h2>
-    <p>
-      Solliciteren hoeft niet moeilijk te zijn. Stuur ons een berichtje op Instagram of een mailtje met een korte introductie, we horen graag wie je bent en wanneer je beschikbaar bent.
-    </p>
-    <div class="jobs-cta-links">
-      <a href="https://www.instagram.com/cafedekletser" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;vertical-align:middle;margin-right:0.5rem"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
-        Instagram DM
-      </a>
-      <a href="mailto:dekletser@outlook.com" class="btn btn-terracotta">
-        Mail ons
-      </a>
-    </div>
   </div>
 </section>
 
