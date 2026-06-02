@@ -26,6 +26,8 @@ navLinks.querySelectorAll('a').forEach(link => {
 })
 
 // ── Smooth scroll ─────────────────────────────
+const catNav = document.querySelector('.menu-cat-nav')
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
     const id = anchor.getAttribute('href')
@@ -33,8 +35,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(id)
     if (target) {
       e.preventDefault()
-      const navH = nav.getBoundingClientRect().height
-      const top  = target.getBoundingClientRect().top + window.scrollY - navH
+      const announcementBar = document.querySelector('.announcement-bar')
+      const announcementH = announcementBar ? announcementBar.getBoundingClientRect().height : 0
+      const navH    = nav.getBoundingClientRect().height
+      const catNavH = catNav ? catNav.getBoundingClientRect().height : 0
+      const offset  = announcementH + navH + catNavH + 16
+      const top     = target.getBoundingClientRect().top + window.scrollY - offset
       window.scrollTo({ top, behavior: 'smooth' })
     }
   })
