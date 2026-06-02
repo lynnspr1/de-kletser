@@ -419,11 +419,26 @@ img { display: block; max-width: 100%; }
 
 /* ── Categorie-navigatie ── */
 .menu-cat-nav {
+  position: sticky;
+  top: 6.5rem;
+  z-index: 100;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.4rem;
   margin-bottom: 2.5rem;
+  margin-left: calc(var(--pad) * -1);
+  margin-right: calc(var(--pad) * -1);
+  padding: 0.75rem var(--pad);
+  background: rgba(245,240,232,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212,185,138,0.4);
+  box-shadow: 0 2px 12px rgba(30,19,12,0.06);
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+.menu-cat-nav::-webkit-scrollbar { display: none; }
 .menu-cat-nav a {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.72rem;
