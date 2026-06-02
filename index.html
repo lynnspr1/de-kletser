@@ -197,16 +197,270 @@
 
     <div class="menu-header">
       <span class="eyebrow">Menu</span>
-      <h2>Binnenkort op de kaart</h2>
+      <h2>Onze kaart</h2>
     </div>
 
-    <p class="menu-coming-soon">
-      We zijn druk bezig met het samenstellen van onze kaart. Denk aan goede koffie, speciaalbier, cocktails en lekkere borrelhapjes.
-    </p>
-    <p class="menu-coming-soon">
-      Binnenkort delen we meer 👀
-    </p>
+    <!-- ── Categorie-nav ── -->
+    <nav class="menu-cat-nav" aria-label="Menucategorieën">
+      <a href="#cat-koffie">Koffie</a>
+      <a href="#cat-thee">Thee</a>
+      <a href="#cat-borrel">Borrelkaart</a>
+      <a href="#cat-frisdrank">Frisdrank</a>
+      <a href="#cat-bieren">Bieren</a>
+      <a href="#cat-wijnen">Wijnen</a>
+      <a href="#cat-cocktails">Cocktails</a>
+      <a href="#cat-shots">Shotjes</a>
+    </nav>
 
+    <div class="menu-grid">
+
+      <!-- ── Koffie ── -->
+      <div class="menu-card" id="cat-koffie">
+        <h3>Koffie</h3>
+        <ul class="menu-list">
+          <li><span>Espresso</span><span>€ 2,75</span></li>
+          <li><span>Koffie (zwart)</span><span>€ 3,00</span></li>
+          <li><span>Cappuccino</span><span>€ 3,20</span></li>
+          <li><span>Koffie verkeerd</span><span>€ 3,20</span></li>
+          <li><span>Latte macchiato</span><span>€ 3,50</span></li>
+          <li><span>Flat white</span><span>€ 3,40</span></li>
+          <li><span>Monin Siroop <em class="menu-note-inline">toevoeging</em></span><span>€ 0,70</span></li>
+          <li><span>Huisgemaakte ijskoffie</span><span>€ 6,50</span></li>
+          <li><span>Irish coffee</span><span>€ 7,50</span></li>
+          <li><span>Spanish coffee</span><span>€ 7,50</span></li>
+          <li><span>Italian coffee</span><span>€ 7,50</span></li>
+        </ul>
+      </div>
+
+      <!-- ── Thee & Warme dranken & Gebak ── -->
+      <div class="menu-card" id="cat-thee">
+        <h3>Thee</h3>
+        <ul class="menu-list">
+          <li><span>Earl Grey</span><span>€ 3,00</span></li>
+          <li><span>Dael's Sencha Green Lemon</span><span>€ 3,00</span></li>
+          <li><span>Dael's Droum Fruitig</span><span>€ 3,00</span></li>
+          <li><span>Rooibos</span><span>€ 3,00</span></li>
+          <li><span>Delicate Herbs</span><span>€ 3,00</span></li>
+          <li><span>Verse muntthee</span><span>€ 3,50</span></li>
+          <li><span>Verse gemberthee</span><span>€ 3,50</span></li>
+        </ul>
+
+        <h3 class="menu-subhead">Warme dranken</h3>
+        <ul class="menu-list">
+          <li><span>Warme chocomel</span><span>€ 3,25</span></li>
+          <li><span>Warme chocomel met slagroom</span><span>€ 3,75</span></li>
+        </ul>
+
+        <h3 class="menu-subhead">Gebak</h3>
+        <ul class="menu-list">
+          <li><span>Huisgemaakte arretjescake</span><span>€ 3,75</span></li>
+          <li><span>Schuimgebak <em class="menu-note-inline">glutenvrij</em></span><span>€ 5,50</span></li>
+          <li><span>Limburgse vlaai</span><span>€ 4,25</span></li>
+          <li><span>Extra slagroom</span><span>€ 0,75</span></li>
+        </ul>
+      </div>
+
+      <!-- ── Borrelkaart (full width) ── -->
+      <div class="menu-card menu-card--full" id="cat-borrel">
+        <h3>Borrelkaart</h3>
+        <div class="menu-two-col">
+          <ul class="menu-list">
+            <li><span>Mini frikandellen <em class="menu-note-inline">10 stuks</em></span><span>€ 7,50</span></li>
+            <li><span>Mini loempia's met chilisaus <em class="menu-note-inline">10 stuks</em></span><span>€ 7,50</span></li>
+            <li><span>Bourgondische bitterballen met mosterdmayo <em class="menu-note-inline">8 stuks</em></span><span>€ 8,75</span></li>
+            <li><span>Mini kaassoufflés met chilisaus <em class="menu-note-inline">8 stuks</em></span><span>€ 8,25</span></li>
+            <li><span>Luxe bittergarnituur XL <em class="menu-note-inline">8 stuks</em></span><span>€ 9,50</span></li>
+            <li><span>Luxe bittergarnituur XL <em class="menu-note-inline">16 stuks</em></span><span>€ 17,75</span></li>
+            <li><span>Huisgemaakte pittige olijven <em class="menu-note-inline">p.p.</em></span><span>€ 2,75</span></li>
+          </ul>
+          <ul class="menu-list">
+            <li><span>Loaded fries kipdöner met knoflooksaus</span><span>€ 13,25</span></li>
+            <li><span>Loaded fries Parmezaanse kaas &amp; truffelmayo</span><span>€ 12,25</span></li>
+            <li><span>Puntzak friet met mayo</span><span>€ 4,75</span></li>
+            <li><span>Tosti kaas</span><span>€ 5,75</span></li>
+            <li><span>Tosti ham/kaas</span><span>€ 5,75</span></li>
+            <li><span>Kaasplank</span><span>€ 14,00</span></li>
+            <li><span><strong>Kletser plank</strong> <em class="menu-note-inline">diverse kazen, worsten &amp; snacks</em></span><span>€ 17,00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── Frisdrank ── -->
+      <div class="menu-card" id="cat-frisdrank">
+        <h3>Frisdrank</h3>
+        <div class="menu-two-col">
+          <ul class="menu-list">
+            <li><span>Coca-Cola</span><span>€ 3,00</span></li>
+            <li><span>Coca-Cola Zero</span><span>€ 3,00</span></li>
+            <li><span>Fanta Orange</span><span>€ 3,00</span></li>
+            <li><span>Fanta Cassis</span><span>€ 3,20</span></li>
+            <li><span>Sprite</span><span>€ 3,00</span></li>
+            <li><span>Royal Bliss Tonic</span><span>€ 3,25</span></li>
+            <li><span>Royal Bliss Bitter Lemon</span><span>€ 3,25</span></li>
+            <li><span>Royal Bliss Ginger Ale</span><span>€ 3,25</span></li>
+            <li><span>Fuze Tea Sparkling</span><span>€ 3,15</span></li>
+            <li><span>Fuze Tea Green</span><span>€ 3,15</span></li>
+          </ul>
+          <ul class="menu-list">
+            <li><span>Fuze Tea Mango</span><span>€ 3,15</span></li>
+            <li><span>Minute Maid Orange</span><span>€ 3,25</span></li>
+            <li><span>Minute Maid Appel</span><span>€ 3,25</span></li>
+            <li><span>Chaudfontaine Rood <em class="menu-note-inline">plat</em></span><span>€ 3,00</span></li>
+            <li><span>Chaudfontaine Blauw <em class="menu-note-inline">bruis</em></span><span>€ 3,00</span></li>
+            <li><span>Red Bull</span><span>€ 3,80</span></li>
+            <li><span>Chocomel</span><span>€ 3,10</span></li>
+            <li><span>Fristi</span><span>€ 3,10</span></li>
+            <li><span>Ranja</span><span>€ 1,50</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── Alc. vrij/-arm & Kletzers ── -->
+      <div class="menu-card">
+        <h3>Alc. vrij / -arm</h3>
+        <ul class="menu-list">
+          <li><span>Lindeboom 0,0</span><span>€ 3,50</span></li>
+          <li><span>Lindeboom Radler 0,0</span><span>€ 3,75</span></li>
+          <li><span>Lindeboom 2,0</span><span>€ 3,75</span></li>
+          <li><span>Venloosch Wit 0,0</span><span>€ 4,95</span></li>
+          <li><span>Gouverneur Blond 0,0</span><span>€ 4,95</span></li>
+          <li><span>Guinness 0,0</span><span>€ 7,50</span></li>
+        </ul>
+
+        <h3 class="menu-subhead">Kletzers</h3>
+        <div class="menu-promo-badge">🎉 Alle Kletzers — 5&nbsp;+&nbsp;1&nbsp;gratis!</div>
+        <ul class="menu-list">
+          <li><span>Hard Ice Tea Lemon <em class="menu-note-inline">citroen seltzer</em></span><span>€ 5,50</span></li>
+          <li><span>Hard Ice Tea Peach <em class="menu-note-inline">perzik seltzer</em></span><span>€ 5,50</span></li>
+          <li><span>Hard Seltzer Raspberry <em class="menu-note-inline">framboos seltzer</em></span><span>€ 5,50</span></li>
+        </ul>
+      </div>
+
+      <!-- ── Bieren (full width) ── -->
+      <div class="menu-card menu-card--full" id="cat-bieren">
+        <h3>Bieren</h3>
+        <div class="menu-two-col">
+          <ul class="menu-list">
+            <li><span>Pils</span><span>€ 3,20</span></li>
+            <li><span>Groot pils <em class="menu-note-inline">0,5L</em></span><span>€ 6,40</span></li>
+            <li><span>Half om</span><span>€ 3,30</span></li>
+            <li><span>Half om <em class="menu-note-inline">0,5L</em></span><span>€ 6,60</span></li>
+            <li><span>Gouverneur Pils</span><span>€ 3,50</span></li>
+            <li><span>Gouverneur Pils <em class="menu-note-inline">0,5L</em></span><span>€ 7,00</span></li>
+            <li><span>Gouverneur Weizen <em class="menu-note-inline">0,3L</em></span><span>€ 5,25</span></li>
+            <li><span>Gouverneur Weizen <em class="menu-note-inline">0,5L</em></span><span>€ 7,25</span></li>
+            <li><span>Venloosch Wit <em class="menu-note-inline">0,3L</em></span><span>€ 5,40</span></li>
+            <li><span>Venloosch Wit <em class="menu-note-inline">0,5L</em></span><span>€ 7,40</span></li>
+            <li><span>Gouverneur Blond <em class="menu-note-inline">25cl</em></span><span>€ 4,90</span></li>
+            <li><span>Gouverneur Tripel <em class="menu-note-inline">25cl</em></span><span>€ 5,75</span></li>
+            <li><span>La Chouffe</span><span>€ 6,00</span></li>
+            <li><span>La Trappe Isid'or</span><span>€ 6,00</span></li>
+          </ul>
+          <ul class="menu-list">
+            <li><span>Delirium Tremens</span><span>€ 6,45</span></li>
+            <li><span>Tripel Karmeliet</span><span>€ 5,75</span></li>
+            <li><span>Westmalle Tripel</span><span>€ 7,00</span></li>
+            <li><span>Gouverneur Pale Ale 140</span><span>€ 4,25</span></li>
+            <li><span>Gouverneur IPA</span><span>€ 6,00</span></li>
+            <li><span>Venloosch Alt</span><span>€ 4,75</span></li>
+            <li><span>Guinness</span><span>€ 8,00</span></li>
+            <li><span>Gouden Carolus Whisky Infused</span><span>€ 6,85</span></li>
+            <li><span>Gouverneur Dubbel</span><span>€ 4,95</span></li>
+            <li><span>Westmalle Dubbel</span><span>€ 6,00</span></li>
+            <li><span>Desperados</span><span>€ 6,00</span></li>
+            <li><span>Corona</span><span>€ 6,00</span></li>
+            <li><span>Liefmans Fruitesse</span><span>€ 5,00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── Wijnen (full width) ── -->
+      <div class="menu-card menu-card--full" id="cat-wijnen">
+        <h3>Wijnen</h3>
+        <div class="menu-two-col">
+          <div>
+            <p class="menu-wine-header"><span>Per glas</span><span>Per fles</span></p>
+            <ul class="menu-list menu-list--wine">
+              <li><span>Huiswijn wit <em class="menu-note-inline">Verdejo</em></span><span class="menu-price-pair"><span>€ 5,00</span><span>€ 23,00</span></span></li>
+              <li><span>Huiswijn wit <em class="menu-note-inline">Zoet</em></span><span class="menu-price-pair"><span>€ 4,50</span><span>€ 21,75</span></span></li>
+              <li><span>Pinot Grigio</span><span class="menu-price-pair"><span>€ 5,50</span><span>€ 26,75</span></span></li>
+              <li><span>Huiswijn rood <em class="menu-note-inline">Sangiovese</em></span><span class="menu-price-pair"><span>€ 4,75</span><span>€ 23,00</span></span></li>
+              <li><span>Domaine du Petit Pont Rouge</span><span class="menu-price-pair"><span>€ 6,00</span><span>€ 27,50</span></span></li>
+              <li><span>Las Dos Marias Rosé</span><span class="menu-price-pair"><span>€ 4,50</span><span>€ 22,00</span></span></li>
+              <li><span>Pinot Nero Spumante Rosato</span><span class="menu-price-pair"><span>€ 6,00</span><span>€ 29,50</span></span></li>
+            </ul>
+          </div>
+          <div>
+            <p class="menu-wine-header--solo">Fles</p>
+            <ul class="menu-list">
+              <li><span>Circle Creek Chardonnay</span><span>€ 35,00</span></li>
+              <li><span>Charles Dupuy Sauvignon Blanc <em class="menu-note-inline">Le Pont Vigneau</em></span><span>€ 39,00</span></li>
+              <li><span>Los Bocheros Single Vineyard Malbec</span><span>€ 39,00</span></li>
+              <li><span>Villa Paradis Coteaux d'Aix-en-Provence 2025</span><span>€ 39,00</span></li>
+              <li><span>Galanti Prosecco Extra Dry DOC</span><span>€ 35,00</span></li>
+              <li><span>Moët &amp; Chandon</span><span>€ 90,00</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Cocktails & Spritz ── -->
+      <div class="menu-card" id="cat-cocktails">
+        <h3>Cocktails &amp; Spritz</h3>
+        <ul class="menu-list">
+          <li><span>Mojito</span><span>€ 9,00</span></li>
+          <li><span>Espresso Martini</span><span>€ 9,50</span></li>
+          <li><span>Pornstar Martini</span><span>€ 9,50</span></li>
+          <li><span>Sex on the Beach</span><span>€ 9,00</span></li>
+          <li><span>Aperol Spritz</span><span>€ 8,50</span></li>
+          <li><span>Limoncello Spritz</span><span>€ 8,50</span></li>
+          <li><span><strong>Kletser Spritz</strong> <em class="menu-note-inline">bloedsinaasappel</em></span><span>€ 8,00</span></li>
+          <li><span>Pitcher Spritz</span><span>€ 28,00</span></li>
+        </ul>
+
+        <h3 class="menu-subhead">Mocktails</h3>
+        <ul class="menu-list">
+          <li><span>Citrus Smash <em class="menu-note-inline">citroen / basilicum</em></span><span>€ 5,00</span></li>
+          <li><span>Tropic Flow <em class="menu-note-inline">mango / passievrucht / kokos</em></span><span>€ 5,00</span></li>
+        </ul>
+      </div>
+
+      <!-- ── Shotjes & Sterke drank ── -->
+      <div class="menu-card" id="cat-shots">
+        <h3>Shotjes &amp; Sterke drank</h3>
+        <div class="menu-two-col">
+          <ul class="menu-list">
+            <li><span>Frissen Ojjem</span><span>€ 3,00</span></li>
+            <li><span>Monkey Balls</span><span>€ 3,00</span></li>
+            <li><span>Olifant Cactus</span><span>€ 3,00</span></li>
+            <li><span>Olifant Candy</span><span>€ 3,00</span></li>
+            <li><span>Olifant Exotic</span><span>€ 3,50</span></li>
+            <li><span>Jägermeister</span><span>€ 3,50</span></li>
+            <li><span>Tequila</span><span>€ 3,50</span></li>
+            <li><span>Sambuca</span><span>€ 3,50</span></li>
+            <li><span>Apfelkorn</span><span>€ 3,50</span></li>
+            <li><span>Jonge Jenever</span><span>€ 3,50</span></li>
+            <li><span>Amaretto</span><span>€ 3,50</span></li>
+            <li><span>Limoncello</span><span>€ 3,50</span></li>
+          </ul>
+          <ul class="menu-list">
+            <li><span>Licor 43</span><span>€ 3,50</span></li>
+            <li><span>Baileys</span><span>€ 3,30</span></li>
+            <li><span>Malibu</span><span>€ 3,50</span></li>
+            <li><span>Vodka</span><span>€ 3,50</span></li>
+            <li><span>Rum</span><span>€ 3,50</span></li>
+            <li><span>Whisky Label 5</span><span>€ 3,50</span></li>
+            <li><span>Baco</span><span>€ 6,50</span></li>
+            <li><span>Malibu Cola</span><span>€ 6,50</span></li>
+            <li><span>Gin Tonic</span><span>€ 7,00</span></li>
+            <li><span>Vodka Red Bull</span><span>€ 7,30</span></li>
+            <li><span>Jägerbomb</span><span>€ 4,50</span></li>
+          </ul>
+        </div>
+        <p class="menu-note">Alle andere mixdranken zelf samen te stellen.</p>
+      </div>
+
+    </div><!-- /.menu-grid -->
   </div>
 </section>
 

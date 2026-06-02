@@ -417,6 +417,124 @@ img { display: block; max-width: 100%; }
   margin-top: 1rem;
 }
 
+/* ── Categorie-navigatie ── */
+.menu-cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2.5rem;
+}
+.menu-cat-nav a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  border: 1.5px solid rgba(181,82,42,0.3);
+  padding: 0.35em 0.9em;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.menu-cat-nav a:hover {
+  background: var(--terracotta);
+  color: var(--cream);
+  border-color: var(--terracotta);
+}
+
+/* ── Full-width card ── */
+.menu-card--full {
+  grid-column: 1 / -1;
+}
+
+/* ── Two-column list layout inside a card ── */
+.menu-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2.5rem;
+}
+
+/* ── Sub-heading inside a card ── */
+.menu-subhead {
+  font-size: 1.1rem;
+  color: var(--terracotta);
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid rgba(181,82,42,0.2);
+}
+
+/* ── Inline italic note ── */
+.menu-note-inline {
+  font-style: italic;
+  font-size: 0.78em;
+  color: rgba(30,19,12,0.45);
+  font-weight: 400;
+}
+
+/* ── Kletzers promo badge ── */
+.menu-promo-badge {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  border: 1.5px solid rgba(181,82,42,0.35);
+  background: rgba(181,82,42,0.06);
+  padding: 0.25em 0.8em;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+/* ── Wijn headers ── */
+.menu-wine-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(30,19,12,0.4);
+  margin-bottom: 0.5rem;
+  padding-right: 0.1rem;
+}
+.menu-wine-header--solo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(30,19,12,0.4);
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+/* ── Wine list — dual price ── */
+.menu-list--wine li {
+  align-items: baseline;
+}
+.menu-price-pair {
+  display: flex;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+.menu-price-pair span {
+  font-weight: 600;
+  color: var(--espresso);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  min-width: 3rem;
+  text-align: right;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .menu-two-col { grid-template-columns: 1fr; gap: 0; }
+  .menu-wine-header { display: none; }
+  .menu-price-pair { gap: 0.75rem; }
+}
+
 /* ═══════════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════════ */

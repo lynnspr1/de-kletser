@@ -7,7 +7,9 @@
       "Bash(npm install *)",
       "Bash(find /Users/lynn/ -maxdepth 4 -name *.html -o -name serve*.mjs -o -name serve*.js)",
       "Bash(npm run *)",
-      "Bash(sips --version)"
+      "Bash(sips --version)",
+      "WebFetch(domain:www.instagram.com)",
+      "Bash(cp \"/Users/lynn/Website De Kletser/brand_assets/achtergrond website de kletser.png\" \"/Users/lynn/Desktop/achtergrond website de kletser.png\")"
     ]
   }
 }
