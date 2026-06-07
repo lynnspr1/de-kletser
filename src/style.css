@@ -599,6 +599,19 @@ img { display: block; max-width: 100%; }
   margin-top: 2.5rem;
 }
 /* Zomeropeningstijden block */
+.hours-notice {
+  background: rgba(212,185,138,0.2);
+  border: 1px solid rgba(212,185,138,0.5);
+  border-left: 3px solid var(--sand);
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: var(--espresso);
+  line-height: 1.5;
+}
+
 .hours-summer {
   background: rgba(181,82,42,0.18);
   border: 1px solid rgba(181,82,42,0.35);
