@@ -40,11 +40,11 @@
     /* ── Hero: split layout ── */
     .ojjem-hero {
       background: var(--espresso);
-      min-height: 90vh;
+      min-height: 75vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: clamp(7rem, 10vw, 9rem) clamp(2rem, 6vw, 5rem) clamp(3rem, 6vw, 5rem);
+      padding: clamp(6rem, 9vw, 8rem) clamp(2rem, 6vw, 5rem) clamp(2.5rem, 5vw, 4rem);
       gap: clamp(2rem, 4vw, 4rem);
     }
 
@@ -149,6 +149,11 @@
       margin: 2.25rem 0 0;
     }
 
+    .ojjem-pills--hero {
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+
     .ojjem-pill {
       background: transparent;
       color: var(--ojjem-teal);
@@ -160,6 +165,11 @@
       text-transform: uppercase;
       padding: 0.45rem 1rem;
       border-radius: 999px;
+    }
+
+    .ojjem-pills--hero .ojjem-pill {
+      color: rgba(245,240,232,0.75);
+      border-color: rgba(245,240,232,0.25);
     }
 
     /* ── Tagline blok ── */
@@ -298,8 +308,10 @@
     <p class="hero-sub">
       Het meest verfrissende shotje ooit. Munt, pepermunt en een lichte kick, precies wat je nodig hebt.
     </p>
-    <div>
-      <a href="/contact" class="btn btn-teal">Kom langs</a>
+    <div class="ojjem-pills ojjem-pills--hero">
+      <span class="ojjem-pill">Munt &amp; pepermunt</span>
+      <span class="ojjem-pill">20% alcohol</span>
+      <span class="ojjem-pill">Exclusief bij De Kletser</span>
     </div>
   </div>
 
