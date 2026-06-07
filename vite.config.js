@@ -11,7 +11,7 @@ export default defineConfig({
         menu:      resolve(__dirname, 'menu.html'),
         contact:   resolve(__dirname, 'contact.html'),
         werkenBij:   resolve(__dirname, 'werken-bij.html'),
-        frissenOjjem: resolve(__dirname, 'frisse-ojjem.html'),
+        frissenOjjem: resolve(__dirname, 'frissen-ojjem.html'),
       },
     },
   },
