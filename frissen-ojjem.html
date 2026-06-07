@@ -58,13 +58,34 @@
       .ojjem-logo { margin: 0 auto; }
     }
 
+    /* ── Logo klein + productfoto groot ── */
+    .ojjem-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
     .ojjem-logo {
-      width: 100%;
-      max-width: 380px;
+      width: clamp(80px, 12vw, 120px);
       height: auto;
       display: block;
       image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
+    }
+
+    .ojjem-product-photo {
+      width: 100%;
+      max-width: 440px;
+      height: clamp(320px, 55vh, 520px);
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .ojjem-left { align-items: center; }
+      .ojjem-logo { margin: 0 auto; }
     }
 
     .ojjem-hero-text {
@@ -93,9 +114,9 @@
       font-family: 'Alegreya Sans', serif;
       font-style: normal;
       font-weight: 700;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-size: clamp(2rem, 4.5vw, 3.8rem);
       color: var(--cream);
-      line-height: 0.95;
+      line-height: 1.05;
       text-transform: uppercase;
       letter-spacing: -0.01em;
     }
@@ -294,19 +315,26 @@
 ══════════════════════════════ -->
 <section class="ojjem-hero">
 
-  <img
-    src="/brand_assets/Frisse Ojjem zonder AG.png"
-    alt="Frissen Ojjem logo"
-    class="ojjem-logo"
-  >
+  <div class="ojjem-left">
+    <img
+      src="/brand_assets/Frisse Ojjem zonder AG.png"
+      alt="Frisse Ojjem logo"
+      class="ojjem-logo"
+    >
+    <img
+      src="/brand_assets/Productfoto.png"
+      alt="Frisse Ojjem shotje met munt en ijs"
+      class="ojjem-product-photo"
+    >
+  </div>
 
   <div class="ojjem-hero-text">
     <h1 class="ojjem-hero-headline">
       <span class="script-line">Voor tijdens en na het stappen</span>
-      <span class="bold-line">Frisse<br>Ojjem.</span>
+      <span class="bold-line">Goede gesprekken.<br>Volle glazen.<br>Frisse Ojjem.</span>
     </h1>
     <p class="hero-sub">
-      Het meest verfrissende shotje ooit. Munt, pepermunt en een lichte kick, precies wat je nodig hebt.
+      Ons eigen shotje voor iedereen die de avond fris wil beginnen of afsluiten.
     </p>
     <div class="ojjem-pills ojjem-pills--hero">
       <span class="ojjem-pill">Munt &amp; pepermunt</span>
@@ -351,7 +379,7 @@
   <p>
     Frissen Ojjem is exclusief verkrijgbaar bij De Kletser in het centrum van Horst. Kom langs en probeer hem zelf.
   </p>
-  <a href="/contact" class="btn btn-teal">Openingstijden bekijken</a>
+  <a href="/contact" class="btn btn-teal">Kom hem proeven</a>
 </section>
 
 
