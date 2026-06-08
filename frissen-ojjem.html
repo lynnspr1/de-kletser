@@ -205,25 +205,41 @@
 
     /* ── MOBIEL ── */
     @media (max-width: 768px) {
+      /* Hero: foto bovenaan, geen padding-top op de afbeelding */
       .ojjem-hero {
         grid-template-columns: 1fr;
         min-height: auto;
+        margin-top: clamp(5rem, 12vw, 7rem); /* ruimte voor announcement + nav */
       }
+
+      /* Foto: volledige breedte, goede hoogte, niet afgesneden */
       .ojjem-product-photo {
-        height: 70vw;
-        min-height: 280px;
+        height: 80vw;
+        min-height: 300px;
+        object-position: center top;
       }
+
+      /* Tekst: geen grote padding-top nodig — nav staat boven de foto */
       .ojjem-hero-text {
-        padding: 2.5rem 1.5rem 3rem;
+        padding: 2rem 1.5rem 2.5rem;
         text-align: center;
       }
+
       .ojjem-hero .hero-sub { max-width: 100%; }
       .ojjem-pills--hero { justify-content: center; }
+
+      /* Twee kolommen: onder elkaar, minder padding */
       .ojjem-two-col-section { grid-template-columns: 1fr; }
+
+      .ojjem-two-col-block {
+        padding: 2.5rem 1.5rem;
+      }
+
       .ojjem-two-col-block--right {
         border-left: none;
         border-top: 1px solid rgba(30,19,12,0.09);
       }
+
       .ojjem-two-col-block h2,
       .ojjem-two-col-block p { max-width: 100%; }
     }
