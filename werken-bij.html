@@ -29,6 +29,112 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/style.css">
+
+  <style>
+    /* ── Hero: compacter ── */
+    .jobs-hero {
+      min-height: 70vh !important;
+    }
+
+    /* ── Gecombineerde inhoudssectie ── */
+    .jobs-combined {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      background: var(--blush);
+      border-top: 1px solid rgba(30,19,12,0.08);
+    }
+
+    /* Linkerkolom: intro tekst */
+    .jobs-combined-left {
+      padding: clamp(3rem, 6vw, 5.5rem) clamp(2.5rem, 5vw, 5rem);
+      border-right: 1px solid rgba(30,19,12,0.08);
+    }
+
+    .jobs-combined-left .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    .jobs-combined-left h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 1.5rem;
+      max-width: 22ch;
+    }
+
+    .jobs-combined-left p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(30,19,12,0.68);
+      max-width: 48ch;
+      margin-bottom: 1rem;
+    }
+
+    /* Rechterkolom: wie/wat gestapeld */
+    .jobs-combined-right {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .jobs-block-new {
+      padding: clamp(2.5rem, 4vw, 4rem) clamp(2rem, 4vw, 4rem);
+      flex: 1;
+    }
+
+    .jobs-block-new:first-child {
+      border-bottom: 1px solid rgba(30,19,12,0.08);
+      background: var(--blush);
+    }
+
+    .jobs-block-new:last-child {
+      background: var(--cream);
+    }
+
+    .jobs-block-new h3 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+      font-weight: 700;
+      color: var(--terracotta);
+      margin-bottom: 1.5rem;
+    }
+
+    .jobs-block-new ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .jobs-block-new li {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: rgba(30,19,12,0.7);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .jobs-block-new li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 1.5px;
+      background: var(--terracotta);
+    }
+
+    /* Mobiel */
+    @media (max-width: 768px) {
+      .jobs-combined {
+        grid-template-columns: 1fr;
+      }
+      .jobs-combined-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(30,19,12,0.08);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -96,12 +202,14 @@
 
 
 <!-- ══════════════════════════════
-     INTRO
+     INHOUD: intro + wie/wat als één geheel
 ══════════════════════════════ -->
-<section class="jobs-section" style="background: var(--blush);">
-  <div class="jobs-inner">
+<section class="jobs-combined">
+
+  <!-- Links: het verhaal -->
+  <div class="jobs-combined-left">
     <span class="eyebrow">Werken bij De Kletser</span>
-    <h2>Een plek waar jij<br>het verschil maakt</h2>
+    <h2>Een plek waar jij het verschil maakt</h2>
     <p>
       De Kletser is de plek waar Horst samenkomt en jij staat daar middenin. Je werkt hier niet alleen, maar samen met een gezellig team tussen de mensen, de drukte en de sfeer. Van volle terrassen tot lange avonden aan de bar.
     </p>
@@ -109,18 +217,13 @@
       We zijn nog maar net begonnen, dus je groeit vanaf het begin met ons mee. Veel lachen, aanpakken en samen iets moois neerzetten. Ervaring is mooi meegenomen, maar niet nodig. Als jij energie hebt en graag tussen de mensen staat, dan horen we graag van je.
     </p>
   </div>
-</section>
 
+  <!-- Rechts: wie/wat gestapeld -->
+  <div class="jobs-combined-right">
 
-<!-- ══════════════════════════════
-     WIE ZOEKEN WE + WAT BIEDEN WIJ
-══════════════════════════════ -->
-<section class="jobs-section jobs-section--split" style="background: var(--cream);">
-  <div class="jobs-inner jobs-two-col">
-
-    <div class="jobs-block">
+    <div class="jobs-block-new">
       <h3>Wie zoeken we?</h3>
-      <ul class="jobs-list">
+      <ul>
         <li>Enthousiaste barmedewerkers, uren in overleg</li>
         <li>Je bent vriendelijk, gastvrij en neemt initiatief</li>
         <li>Je voelt je thuis in een drukke, gezellige omgeving</li>
@@ -130,9 +233,9 @@
       </ul>
     </div>
 
-    <div class="jobs-block">
+    <div class="jobs-block-new">
       <h3>Wat bieden wij?</h3>
-      <ul class="jobs-list">
+      <ul>
         <li>Een gezellige werkplek met een jong team</li>
         <li>Flexibele uren die passen bij jouw agenda</li>
         <li>Een lekker salaris</li>
@@ -143,6 +246,7 @@
     </div>
 
   </div>
+
 </section>
 
 
