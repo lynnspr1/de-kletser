@@ -147,23 +147,40 @@
       background: transparent;
     }
 
-    /* ── TWEE KOLOMMEN: naadloos verbonden met hero ── */
-    .ojjem-two-col-section {
-      display: grid;
-      grid-template-columns: 55fr 45fr;
-      border-top: 1px solid rgba(30,19,12,0.09);
-    }
-
-    .ojjem-two-col-block {
+    /* ── CONTENT BLOK: gecentreerd, één geheel ── */
+    .ojjem-content-block {
       background: var(--blush);
-      padding: 4rem clamp(2.5rem, 5vw, 5rem);
+      border-top: 1px solid rgba(30,19,12,0.09);
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 5rem);
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
     }
 
-    .ojjem-two-col-block--right {
-      border-left: 1px solid rgba(30,19,12,0.09);
+    .ojjem-content-block h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--espresso);
+      max-width: 34ch;
+      margin: 0 0 1.25rem;
+      font-kerning: none;
+      font-feature-settings: "kern" 0;
+    }
+
+    .ojjem-content-block p {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.85;
+      color: rgba(30,19,12,0.62);
+      max-width: 52ch;
+      margin: 0 0 1rem;
+    }
+
+    .ojjem-content-block .btn-teal {
+      margin-top: 1.5rem;
     }
 
     .ojjem-two-col-block--right {
@@ -175,7 +192,7 @@
       height: 2px;
       border: none;
       background: var(--ojjem-teal);
-      margin: 0 0 1.5rem;
+      margin: 0 auto 1.5rem;
       flex-shrink: 0;
     }
 
@@ -368,35 +385,19 @@
 
 
 <!-- ══════════════════════════════
-     VERHAAL + EXCLUSIVITEIT
-     Links: warm & licht (het verhaal)
-     Rechts: donker & dominant (de exclusiviteit + CTA)
+     VERHAAL + EXCLUSIVITEIT — gecentreerd
 ══════════════════════════════ -->
-<section class="ojjem-two-col-section">
-
-  <!-- Verhaal — zelfde structuur als rechterkolom -->
-  <div class="ojjem-two-col-block ojjem-two-col-block--left">
-    <hr class="ojjem-block-rule">
-    <span class="ojjem-block-eyebrow">Geboren achter de bar</span>
-    <h2>Het begon met een goed gesprek en een leeg glas.</h2>
-    <p>
-      We wilden iets van onszelf. Iets wat je nergens anders krijgt en dat past bij een avond bij De Kletser. Zo ontstond Frissen Ojjem: een shot van munt en pepermunt, lichtzoet en verrassend fris.
-    </p>
-    <!-- Spacer voor gelijke kolomhoogte op desktop, verborgen op mobiel -->
-    <span class="ojjem-spacer"></span>
-  </div>
-
-  <!-- Exclusiviteit — zelfde structuur als linkerkolom -->
-  <div class="ojjem-two-col-block ojjem-two-col-block--right">
-    <hr class="ojjem-block-rule">
-    <span class="ojjem-block-eyebrow">Eén plek. Één shot.</span>
-    <h2>Frissen Ojjem is nergens anders te krijgen.</h2>
-    <p>
-      Niet in een fles, niet in een supermarkt, niet ergens anders in Horst. Alleen aan de bar van De Kletser, door ons, voor jou.
-    </p>
-    <a href="/contact" class="btn btn-teal">Kom proeven</a>
-  </div>
-
+<section class="ojjem-content-block">
+  <hr class="ojjem-block-rule">
+  <span class="ojjem-block-eyebrow">Geboren achter de bar</span>
+  <h2>Het begon met een goed gesprek en een leeg glas.</h2>
+  <p>
+    We wilden iets van onszelf. Iets wat je nergens anders krijgt en dat past bij een avond bij De Kletser. Zo ontstond Frissen Ojjem: een shot van munt en pepermunt, lichtzoet en verrassend fris.
+  </p>
+  <p>
+    Niet in een fles, niet in een supermarkt, niet ergens anders in Horst. Alleen aan de bar van De Kletser, door ons, voor jou.
+  </p>
+  <a href="/contact" class="btn btn-teal">Kom proeven</a>
 </section>
 
 
