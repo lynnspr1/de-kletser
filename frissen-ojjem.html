@@ -31,9 +31,7 @@
   <link rel="stylesheet" href="/src/style.css">
 
   <style>
-    :root {
-      --ojjem-teal: #1a8fa0;
-    }
+    :root { --ojjem-teal: #1a8fa0; }
 
     /* Nav altijd zichtbaar — lichte achtergrond vereist dit */
     #nav {
@@ -45,104 +43,87 @@
       padding-bottom: 0.75rem !important;
     }
 
-    /* ════════════════════════════
-       HERO
-       55/45 split: foto domineert,
-       tekst heeft ruimte om te ademen
-    ════════════════════════════ */
+    /* ── HERO: foto naadloos vanaf y=0, tekst gecleard met padding ── */
     .ojjem-hero {
       background: var(--blush);
       display: grid;
       grid-template-columns: 55fr 45fr;
-      min-height: 88vh;
+      min-height: 100vh;
       padding: 0;
-      margin-top: clamp(5rem, 8vw, 6.5rem); /* schuift de hele hero onder de nav */
+      /* Geen margin-top of padding-top op het grid zelf */
     }
 
-    /* Foto vult de linkerkolom volledig */
-    .ojjem-left {
-      position: relative;
-      overflow: hidden;
-    }
+    /* Foto: volledig van boven tot onder zonder gaps */
+    .ojjem-left { overflow: hidden; }
 
     .ojjem-product-photo {
       width: 100%;
       height: 100%;
-      min-height: 520px;
       object-fit: cover;
-      object-position: center top;
+      object-position: center;
       display: block;
     }
 
-    /* Tekstkant heeft ruime interne padding */
+    /* Tekst: padding-top ruim genoeg voor announcement bar + nav */
     .ojjem-hero-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(4rem, 6vw, 6rem) clamp(2.5rem, 5vw, 5rem);
-      gap: 0;
+      padding: clamp(8rem, 12vw, 10rem) clamp(2.5rem, 5vw, 5rem) clamp(3rem, 5vw, 5rem);
     }
 
-    /* Kleine tag boven de headline */
     .ojjem-supertag {
-      display: inline-block;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--ojjem-teal);
+      display: block;
       margin-bottom: 1.25rem;
     }
 
-    /* Script-regel als stemmingsmaker */
     .ojjem-hero-headline .script-line {
       display: block;
       font-family: 'Lora', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      color: rgba(30,19,12,0.4);
-      letter-spacing: 0.01em;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: rgba(30,19,12,0.38);
       line-height: 1.4;
-      margin-bottom: 0.4em;
+      margin-bottom: 0.35em;
     }
 
-    /* Hoofdkop: groot, bold, uppercase — dit is het focal point */
     .ojjem-hero-headline .bold-line {
       display: block;
       font-family: 'Lora', serif;
       font-weight: 700;
-      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-size: clamp(2rem, 3.8vw, 3.4rem);
       color: var(--espresso);
-      line-height: 1.08;
+      line-height: 1.1;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-kerning: normal;
-      text-rendering: optimizeLegibility;
+      letter-spacing: 0.03em;
     }
 
-    /* Subtekst: ruimte erboven, beperkte breedte voor leesbaarheid */
     .ojjem-hero .hero-sub {
       color: rgba(30,19,12,0.58);
-      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
       line-height: 1.8;
       margin: 1.75rem 0 0;
-      max-width: 36ch;
+      max-width: 38ch;
     }
 
-    /* Pills: ruimte erboven, subtiel van kleur */
     .ojjem-pills--hero {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      justify-content: flex-start;
       margin-top: 2rem;
     }
 
     .ojjem-pill {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -153,44 +134,34 @@
       background: transparent;
     }
 
-    /* ════════════════════════════
-       TWEE KOLOMMEN
-       Identieke structuur, identiek ritme,
-       identieke typografie — spiegelkaarten
-    ════════════════════════════ */
-
-    /* Container: scheidt kolommen met subtiele verticale lijn */
+    /* ── TWEE KOLOMMEN: zelfde breedte als hero, naadloos aansluitend ── */
     .ojjem-two-col-section {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-top: 1px solid rgba(30,19,12,0.08);
+      grid-template-columns: 55fr 45fr; /* spiegelt hero exact */
+      border-top: 1px solid rgba(30,19,12,0.09);
     }
 
-    /* Beide blokken: exact dezelfde achtergrond, padding en structuur */
     .ojjem-two-col-block {
       background: var(--blush);
-      padding: 5rem clamp(2.5rem, 5vw, 5rem);
+      padding: 4rem clamp(2.5rem, 5vw, 5rem);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
 
-    /* Subtiele scheidingslijn tussen de kolommen */
     .ojjem-two-col-block--right {
-      border-left: 1px solid rgba(30,19,12,0.08);
+      border-left: 1px solid rgba(30,19,12,0.09);
     }
 
-    /* Accentlijn: identiek in beide kolommen */
     .ojjem-block-rule {
-      width: 32px;
+      width: 28px;
       height: 2px;
       border: none;
       background: var(--ojjem-teal);
-      margin: 0 0 1.75rem;
+      margin: 0 0 1.5rem;
       flex-shrink: 0;
     }
 
-    /* Eyebrow: identiek in beide kolommen */
     .ojjem-block-eyebrow {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.68rem;
@@ -202,79 +173,57 @@
       margin-bottom: 1rem;
     }
 
-    /* Heading: identiek font, grootte, regelhoogte en maximale breedte */
     .ojjem-two-col-block h2 {
       font-family: 'Lora', serif;
-      font-size: clamp(1.5rem, 2vw, 1.9rem);
+      font-size: clamp(1.35rem, 1.8vw, 1.75rem);
       font-weight: 700;
       line-height: 1.3;
       color: var(--espresso);
-      max-width: 24ch;
-      margin: 0 0 1.25rem;
+      max-width: 26ch;
+      margin: 0 0 1.1rem;
     }
 
-    /* Paragraaf: identiek font, grootte, regelhoogte en maximale breedte */
     .ojjem-two-col-block p {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       line-height: 1.85;
       color: rgba(30,19,12,0.6);
-      max-width: 38ch;
+      max-width: 40ch;
       margin: 0 0 2.5rem;
     }
 
-    /* CTA: altijd op dezelfde verticale positie via flex + margin-top auto */
-    .ojjem-two-col-block .btn-teal {
-      margin-top: auto;
-    }
+    .ojjem-two-col-block .btn-teal { margin-top: auto; }
 
     .btn-teal {
       background: var(--ojjem-teal);
       color: var(--cream);
       border-color: var(--ojjem-teal);
     }
+    .btn-teal:hover { background: #157080; border-color: #157080; }
 
-    .btn-teal:hover {
-      background: #157080;
-      border-color: #157080;
-    }
-
-    /* ════════════════════════════
-       MOBIEL
-    ════════════════════════════ */
+    /* ── MOBIEL ── */
     @media (max-width: 768px) {
       .ojjem-hero {
         grid-template-columns: 1fr;
         min-height: auto;
       }
-
       .ojjem-product-photo {
-        height: 56vw;
-        min-height: 260px;
+        height: 70vw;
+        min-height: 280px;
       }
-
       .ojjem-hero-text {
         padding: 2.5rem 1.5rem 3rem;
         text-align: center;
       }
-
       .ojjem-hero .hero-sub { max-width: 100%; }
-
       .ojjem-pills--hero { justify-content: center; }
-
-      .ojjem-two-col-section {
-        grid-template-columns: 1fr;
-      }
-
+      .ojjem-two-col-section { grid-template-columns: 1fr; }
       .ojjem-two-col-block--right {
         border-left: none;
-        border-top: 1px solid rgba(30,19,12,0.08);
+        border-top: 1px solid rgba(30,19,12,0.09);
       }
-
       .ojjem-two-col-block h2,
-      .ojjem-two-col-block p {
-        max-width: 100%;
-      }
+      .ojjem-two-col-block p { max-width: 100%; }
     }
   </style>
 </head>
