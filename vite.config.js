@@ -12,6 +12,7 @@ export default defineConfig({
         contact:   resolve(__dirname, 'contact.html'),
         werkenBij:   resolve(__dirname, 'werken-bij.html'),
         frissenOjjem: resolve(__dirname, 'frissen-ojjem.html'),
+        fontPreview:  resolve(__dirname, 'font-preview.html'),
       },
     },
   },
