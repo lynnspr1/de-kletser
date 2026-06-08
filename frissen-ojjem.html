@@ -53,15 +53,28 @@
       /* Geen margin-top of padding-top op het grid zelf */
     }
 
-    /* Foto: volledig van boven tot onder zonder gaps */
-    .ojjem-left { overflow: hidden; }
+    /* Foto: volledig van boven tot onder, met teal accentlijn als brug naar content */
+    .ojjem-left {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
     .ojjem-product-photo {
       width: 100%;
-      height: 100%;
+      flex: 1;
       object-fit: cover;
       object-position: center;
       display: block;
+    }
+
+    /* Teal streep onderaan de foto — verbindt visueel met de pillkleuren */
+    .ojjem-left::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background: var(--ojjem-teal);
+      flex-shrink: 0;
     }
 
     /* Tekst: padding-top ruim genoeg voor announcement bar + nav */
@@ -134,10 +147,10 @@
       background: transparent;
     }
 
-    /* ── TWEE KOLOMMEN: zelfde breedte als hero, naadloos aansluitend ── */
+    /* ── TWEE KOLOMMEN: naadloos verbonden met hero ── */
     .ojjem-two-col-section {
       display: grid;
-      grid-template-columns: 55fr 45fr; /* spiegelt hero exact */
+      grid-template-columns: 55fr 45fr;
       border-top: 1px solid rgba(30,19,12,0.09);
     }
 
@@ -147,6 +160,10 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .ojjem-two-col-block--right {
+      border-left: 1px solid rgba(30,19,12,0.09);
     }
 
     .ojjem-two-col-block--right {
