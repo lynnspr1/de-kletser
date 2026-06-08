@@ -245,6 +245,45 @@
       margin: 0 auto;
     }
 
+    /* ── Twee kolommen sectie ── */
+    .ojjem-two-col-section {
+      background: var(--blush);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .ojjem-two-col-block {
+      padding: clamp(2.5rem, 5vw, 5rem) clamp(2rem, 5vw, 4.5rem);
+    }
+
+    .ojjem-two-col-block--right {
+      background: var(--cream);
+    }
+
+    .ojjem-two-col-block h2 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    }
+
+    .ojjem-two-col-block p {
+      color: var(--espresso);
+      opacity: 0.72;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .ojjem-two-col-block .eyebrow {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .ojjem-two-col-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ── CTA sectie ── */
     .ojjem-cta {
       background: var(--blush);
@@ -365,30 +404,29 @@
 
 
 <!-- ══════════════════════════════
-     VERHAAL
+     VERHAAL + CTA naast elkaar
 ══════════════════════════════ -->
-<section class="ojjem-section" style="background: var(--blush);">
-  <div class="ojjem-inner">
-    <hr class="ojjem-divider">
-    <span class="eyebrow" style="color: var(--ojjem-teal);">Geboren achter de bar</span>
-    <h2>Het begon met een goed gesprek<br>en een leeg glas.</h2>
+<section class="ojjem-two-col-section">
+
+  <div class="ojjem-two-col-block ojjem-two-col-block--left">
+    <hr class="ojjem-divider" style="margin-left:0;">
+    <span class="eyebrow" style="color: var(--ojjem-teal); text-align:left;">Geboren achter de bar</span>
+    <h2>Het begon met een goed gesprek en een leeg glas.</h2>
     <p>
       We wilden iets van onszelf. Iets wat je nergens anders krijgt en dat past bij een avond bij De Kletser. Zo ontstond Frissen Ojjem: een shot van munt en pepermunt, lichtzoet en verrassend fris.
     </p>
   </div>
-</section>
 
+  <div class="ojjem-two-col-block ojjem-two-col-block--right">
+    <hr class="ojjem-divider" style="margin-left:0; background: var(--espresso);">
+    <span class="eyebrow" style="color: var(--espresso); opacity:0.5; text-align:left;">Eén plek. Één shot.</span>
+    <h2>Frissen Ojjem is nergens anders te krijgen.</h2>
+    <p>
+      Niet in een fles, niet in een supermarkt, niet ergens anders in Horst. Alleen aan de bar van De Kletser, door ons, voor jou.
+    </p>
+    <a href="/contact" class="btn btn-teal" style="margin-top:1.5rem; display:inline-block;">Kom proeven</a>
+  </div>
 
-<!-- ══════════════════════════════
-     CTA
-══════════════════════════════ -->
-<section class="ojjem-cta">
-  <span class="eyebrow">Eén plek. Één shot.</span>
-  <h2>Frissen Ojjem is nergens<br>anders te krijgen.</h2>
-  <p>
-    Niet in een fles, niet in een supermarkt, niet ergens anders in Horst. Alleen aan de bar van De Kletser, door ons, voor jou.
-  </p>
-  <a href="/contact" class="btn btn-teal">Kom proeven</a>
 </section>
 
 
