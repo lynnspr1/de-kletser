@@ -196,6 +196,13 @@
 
     .ojjem-two-col-block .btn-teal { margin-top: auto; }
 
+    .ojjem-spacer {
+      display: block;
+      margin-top: auto;
+      height: 2.75rem;
+      flex-shrink: 0;
+    }
+
     .btn-teal {
       background: var(--ojjem-teal);
       color: var(--cream);
@@ -242,6 +249,9 @@
 
       .ojjem-two-col-block h2,
       .ojjem-two-col-block p { max-width: 100%; }
+
+      /* Spacer verbergen op mobiel — geen gelijke kolomhoogte nodig */
+      .ojjem-spacer { display: none; }
     }
   </style>
 </head>
@@ -355,8 +365,8 @@
     <p>
       We wilden iets van onszelf. Iets wat je nergens anders krijgt en dat past bij een avond bij De Kletser. Zo ontstond Frissen Ojjem: een shot van munt en pepermunt, lichtzoet en verrassend fris.
     </p>
-    <!-- Spacer zodat beide kolommen gelijke hoogte hebben -->
-    <span style="margin-top:auto; display:block; height:2.75rem;"></span>
+    <!-- Spacer voor gelijke kolomhoogte op desktop, verborgen op mobiel -->
+    <span class="ojjem-spacer"></span>
   </div>
 
   <!-- Exclusiviteit — zelfde structuur als linkerkolom -->
