@@ -56,6 +56,7 @@
       grid-template-columns: 55fr 45fr;
       min-height: 88vh;
       padding: 0;
+      padding-top: clamp(5rem, 8vw, 6.5rem); /* ruimte voor announcement bar + nav */
     }
 
     /* Foto vult de linkerkolom volledig */
@@ -116,7 +117,9 @@
       color: var(--espresso);
       line-height: 1.08;
       text-transform: uppercase;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.04em;
+      font-kerning: normal;
+      text-rendering: optimizeLegibility;
     }
 
     /* Subtekst: ruimte erboven, beperkte breedte voor leesbaarheid */
@@ -172,9 +175,9 @@
       background: var(--blush);
     }
 
-    /* Rechts: donker, sterk — de exclusiviteit */
+    /* Rechts: iets warmer dan links voor subtiel contrast */
     .ojjem-two-col-block--right {
-      background: var(--espresso);
+      background: var(--cream);
     }
 
     /* Eyebrow links */
@@ -196,7 +199,7 @@
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: rgba(245,240,232,0.35);
+      color: rgba(30,19,12,0.4);
       display: block;
       margin-bottom: 1.25rem;
     }
@@ -211,7 +214,7 @@
     }
 
     .ojjem-two-col-block--right .ojjem-block-rule {
-      background: rgba(245,240,232,0.2);
+      background: var(--ojjem-teal);
     }
 
     /* Koptekst links */
@@ -223,11 +226,11 @@
       max-width: 22ch;
     }
 
-    /* Koptekst rechts — groter, meer dominant */
+    /* Koptekst rechts */
     .ojjem-two-col-block--right h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.4rem);
       line-height: 1.2;
-      color: var(--cream);
+      color: var(--espresso);
       margin-bottom: 1.25rem;
       max-width: 20ch;
     }
@@ -244,7 +247,7 @@
     .ojjem-two-col-block--right p {
       font-size: 0.975rem;
       line-height: 1.85;
-      color: rgba(245,240,232,0.55);
+      color: rgba(30,19,12,0.65);
       max-width: 38ch;
       margin-bottom: 2.5rem;
     }
