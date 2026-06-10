@@ -88,11 +88,11 @@
   <link rel="stylesheet" href="/src/style.css">
 
   <style>
-    /* Positie: rechtsboven in de hero, onder de nav-icoontjes */
+    /* Positie: pijltip ligt recht onder de social icons in de nav */
     .social-hint {
       position: absolute;
       top: clamp(5rem, 8vw, 7rem);
-      right: clamp(1.5rem, 3vw, 3rem);
+      right: clamp(1.5rem, 5vw, 5rem); /* zelfde als --pad: lijn uit met nav-icons */
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -100,22 +100,23 @@
       opacity: 0.55;
       pointer-events: none;
       z-index: 10;
+      transform: translateX(50%); /* verschuif zodat pijl gecentreerd onder icons staat */
     }
 
     .social-hint-text {
       font-family: 'Lora', serif;
       font-style: italic;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--cream);
       line-height: 1.5;
       letter-spacing: 0.01em;
       text-align: right;
+      white-space: nowrap;
     }
 
-    /* Pijl wijst naar het midden (naar rechts/omhoog richting sociale iconen) */
     .social-hint-arrow {
-      width: 28px;
-      height: 28px;
+      width: 20px;
+      height: 40px;
       color: var(--cream);
       flex-shrink: 0;
     }
@@ -183,10 +184,10 @@
   <!-- Subtiele social hint rechtsboven op de hero -->
   <div class="social-hint" aria-hidden="true">
     <span class="social-hint-text">Volg ons<br>en mis niets!</span>
-    <!-- Pijl wijst naar rechts/omhoog richting de social icons -->
-    <svg class="social-hint-arrow" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 22 C10 22, 24 8, 32 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M27 2 L32 5 L28 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Pijl wijst recht omhoog naar de social icons -->
+    <svg class="social-hint-arrow" viewBox="0 0 20 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 36 C10 36, 10 16, 10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M6 12 L10 6 L14 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </svg>
   </div>
 
