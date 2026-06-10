@@ -88,32 +88,37 @@
   <link rel="stylesheet" href="/src/style.css">
 
   <style>
+    /* Positie: rechtsboven in de hero, net onder de nav-icoontjes */
     .social-hint {
+      position: absolute;
+      top: clamp(5rem, 8vw, 7rem);
+      right: clamp(1.5rem, 3vw, 3rem);
       display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      opacity: 0.45;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.5rem;
+      opacity: 0.4;
       pointer-events: none;
-      margin-right: -0.25rem;
+      z-index: 10;
+    }
+
+    .social-hint-arrow {
+      width: 16px;
+      height: 24px;
+      color: var(--cream);
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
     .social-hint-text {
       font-family: 'Lora', serif;
       font-style: italic;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--cream);
-      white-space: nowrap;
+      line-height: 1.5;
       letter-spacing: 0.01em;
     }
 
-    .social-hint-arrow {
-      width: 28px;
-      height: 18px;
-      color: var(--cream);
-      flex-shrink: 0;
-    }
-
-    /* Verberg op mobiel */
     @media (max-width: 768px) {
       .social-hint { display: none; }
     }
@@ -148,14 +153,6 @@
     <a href="/werken-bij"     class="nav-link">Werken bij</a>
     <a href="/frissen-ojjem"  class="nav-link">Frissen Ojjem</a>
 
-    <div class="social-hint" aria-hidden="true">
-      <span class="social-hint-text">Volg ons en mis niets!</span>
-      <svg class="social-hint-arrow" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 15 C8 15, 20 4, 29 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-        <path d="M24 2 L29 4 L25 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-    </div>
-
     <div class="social-links social-links--nav">
       <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
@@ -181,6 +178,16 @@
      HERO
 ══════════════════════════════ -->
 <section id="home" class="hero tile-bg">
+
+  <!-- Subtiele social hint rechtsboven op de hero -->
+  <div class="social-hint" aria-hidden="true">
+    <svg class="social-hint-arrow" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2 C12 2, 4 10, 12 20 C16 25, 20 28, 18 34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M14 30 L18 34 L21 29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <span class="social-hint-text">Volg ons<br>en mis niets!</span>
+  </div>
+
   <div class="hero-inner">
     <picture>
       <img class="hero-logo" src="/brand_assets/logo-wordmark.png" alt="De Kletser — café in Horst" width="400" height="144" fetchpriority="high">
