@@ -88,35 +88,36 @@
   <link rel="stylesheet" href="/src/style.css">
 
   <style>
-    /* Positie: rechtsboven in de hero, net onder de nav-icoontjes */
+    /* Positie: rechtsboven in de hero, onder de nav-icoontjes */
     .social-hint {
       position: absolute;
       top: clamp(5rem, 8vw, 7rem);
       right: clamp(1.5rem, 3vw, 3rem);
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
-      gap: 0.5rem;
-      opacity: 0.4;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0.55;
       pointer-events: none;
       z-index: 10;
-    }
-
-    .social-hint-arrow {
-      width: 16px;
-      height: 24px;
-      color: var(--cream);
-      flex-shrink: 0;
-      margin-top: 2px;
     }
 
     .social-hint-text {
       font-family: 'Lora', serif;
       font-style: italic;
-      font-size: 0.7rem;
+      font-size: 0.85rem;
       color: var(--cream);
       line-height: 1.5;
       letter-spacing: 0.01em;
+      text-align: right;
+    }
+
+    /* Pijl wijst naar het midden (naar rechts/omhoog richting sociale iconen) */
+    .social-hint-arrow {
+      width: 28px;
+      height: 28px;
+      color: var(--cream);
+      flex-shrink: 0;
     }
 
     @media (max-width: 768px) {
@@ -181,11 +182,12 @@
 
   <!-- Subtiele social hint rechtsboven op de hero -->
   <div class="social-hint" aria-hidden="true">
-    <svg class="social-hint-arrow" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2 C12 2, 4 10, 12 20 C16 25, 20 28, 18 34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M14 30 L18 34 L21 29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </svg>
     <span class="social-hint-text">Volg ons<br>en mis niets!</span>
+    <!-- Pijl wijst naar rechts/omhoog richting de social icons -->
+    <svg class="social-hint-arrow" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 22 C10 22, 24 8, 32 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M27 2 L32 5 L28 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
   </div>
 
   <div class="hero-inner">
