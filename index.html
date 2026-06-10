@@ -86,6 +86,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/style.css">
+
+  <style>
+    .social-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0.45;
+      pointer-events: none;
+      margin-right: -0.25rem;
+    }
+
+    .social-hint-text {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 0.72rem;
+      color: var(--cream);
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+
+    .social-hint-arrow {
+      width: 28px;
+      height: 18px;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+
+    /* Verberg op mobiel */
+    @media (max-width: 768px) {
+      .social-hint { display: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -115,6 +147,14 @@
     <a href="/contact"     class="nav-link">Contact</a>
     <a href="/werken-bij"     class="nav-link">Werken bij</a>
     <a href="/frissen-ojjem"  class="nav-link">Frissen Ojjem</a>
+
+    <div class="social-hint" aria-hidden="true">
+      <span class="social-hint-text">Volg ons en mis niets!</span>
+      <svg class="social-hint-arrow" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 15 C8 15, 20 4, 29 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M24 2 L29 4 L25 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
 
     <div class="social-links social-links--nav">
       <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
