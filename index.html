@@ -88,16 +88,14 @@
   <link rel="stylesheet" href="/src/style.css">
 
   <style>
-    /* Positie: gecentreerd onder de 3 social icons */
+    /* Gecentreerd onder de 3 social icons */
     .social-hint {
       position: absolute;
       top: clamp(5rem, 8vw, 7rem);
-      right: clamp(4rem, 9vw, 9rem); /* nav-pad + halve breedte iconengroep */
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.75rem;
-      opacity: 0.55;
+      right: clamp(1.5rem, 5vw, 5rem); /* zelfde als --pad */
+      transform: translateX(50%); /* schuift het midden van het element naar de icons */
+      text-align: center;
+      opacity: 0.5;
       pointer-events: none;
       z-index: 10;
     }
@@ -105,19 +103,11 @@
     .social-hint-text {
       font-family: 'Lora', serif;
       font-style: italic;
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       color: var(--cream);
       line-height: 1.5;
       letter-spacing: 0.01em;
-      text-align: right;
       white-space: nowrap;
-    }
-
-    .social-hint-arrow {
-      width: 60px;
-      height: 42px;
-      color: var(--cream);
-      flex-shrink: 0;
     }
 
     @media (max-width: 768px) {
@@ -182,14 +172,7 @@
 
   <!-- Subtiele social hint rechtsboven op de hero -->
   <div class="social-hint" aria-hidden="true">
-    <span class="social-hint-text">Volg ons<br>en mis niets!</span>
-    <!-- Pijl exact conform referentie: begint horizontaal links, eindigt verticaal rechts omhoog -->
-    <svg class="social-hint-arrow" viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Bezier: controle 1 recht rechts van start (horizontale aftrek), controle 2 recht boven einde (verticale aantrek) -->
-      <path d="M5 68 C55 68, 88 18, 88 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-      <!-- Pijlpunt: twee korte vleugels omhoog -->
-      <path d="M83 13 L88 4 L93 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </svg>
+    <span class="social-hint-text">Volg ons en mis niets!</span>
   </div>
 
   <div class="hero-inner">
