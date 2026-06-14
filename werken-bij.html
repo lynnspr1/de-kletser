@@ -34,6 +34,24 @@
     /* ── Hero: compacter ── */
     .jobs-hero {
       min-height: 70vh !important;
+      background-image: url('/brand_assets/WERKEN BIJ.jpg') !important;
+      background-size: cover !important;
+      background-position: center top !important;
+      position: relative;
+    }
+
+    /* Donkere overlay zodat tekst leesbaar blijft */
+    .jobs-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(30,19,12,0.55);
+      z-index: 0;
+    }
+
+    .jobs-hero-inner {
+      position: relative;
+      z-index: 1;
     }
 
     /* ── Gecombineerde inhoudssectie ── */
@@ -189,7 +207,7 @@
 <!-- ══════════════════════════════
      HERO
 ══════════════════════════════ -->
-<section class="jobs-hero tile-bg">
+<section class="jobs-hero">
   <div class="jobs-hero-inner">
     <span class="eyebrow" style="color: rgba(245,240,232,0.55);">Vacatures</span>
     <h1>Kom werken bij<br>De Kletser</h1>
