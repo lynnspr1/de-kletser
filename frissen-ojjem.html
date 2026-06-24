@@ -7,7 +7,7 @@
   <!-- ── Primary SEO ── -->
   <title>Frissen Ojjem | Exclusief shotje van De Kletser Horst</title>
   <meta name="title" content="Frissen Ojjem | Exclusief shotje van De Kletser Horst">
-  <meta name="description" content="Frissen Ojjem is het meest verfrissende shotje van Horst. Munt, pepermunt en een lichte kick — exclusief verkrijgbaar bij De Kletser.">
+  <meta name="description" content="Frissen Ojjem is het eigen huisshotje van De Kletser. Munt, pepermunt en een lichte kick — exclusief verkrijgbaar bij De Kletser in Horst.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.dekletser.nl/frissen-ojjem">
 
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="nl_NL">
   <meta property="og:title" content="Frissen Ojjem — het verfrissende shotje van De Kletser">
   <meta property="og:description" content="Munt, pepermunt en een lichte kick. Exclusief verkrijgbaar bij De Kletser in Horst.">
-  <meta property="og:image" content="https://www.dekletser.nl/brand_assets/Frissen Ojjem.jpg">
+  <meta property="og:image" content="https://www.dekletser.nl/brand_assets/frissen ojjem (productfoto).png">
 
   <!-- ── Favicon ── -->
   <link rel="icon" type="image/png" href="/brand_assets/logo-badge-opt.png">
@@ -33,7 +33,7 @@
   <style>
     :root { --ojjem-teal: #1a8fa0; }
 
-    /* Nav altijd zichtbaar — lichte achtergrond vereist dit */
+    /* Nav altijd donker op deze pagina */
     #nav {
       background: rgba(30,19,12,0.95) !important;
       backdrop-filter: blur(12px) !important;
@@ -43,41 +43,36 @@
       padding-bottom: 0.75rem !important;
     }
 
-    /* ── HERO: foto naadloos vanaf y=0, tekst gecleard met padding ── */
+    /* ── HERO ── */
     .ojjem-hero {
-      background: var(--blush);
       display: grid;
       grid-template-columns: 55fr 45fr;
       min-height: 100vh;
-      padding: 0;
-      /* Geen margin-top of padding-top op het grid zelf */
+      background: var(--espresso);
     }
 
-    /* Foto: volledig van boven tot onder, met teal accentlijn als brug naar content */
     .ojjem-left {
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      position: relative;
     }
 
     .ojjem-product-photo {
       width: 100%;
-      flex: 1;
+      height: 100%;
       object-fit: cover;
       object-position: center;
       display: block;
     }
 
-    /* Teal streep onderaan de foto — verbindt visueel met de pillkleuren */
+    /* Subtiele teal accentlijn rechts van de foto */
     .ojjem-left::after {
       content: '';
-      display: block;
-      height: 4px;
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 4px;
       background: var(--ojjem-teal);
-      flex-shrink: 0;
     }
 
-    /* Tekst: padding-top ruim genoeg voor announcement bar + nav */
     .ojjem-hero-text {
       display: flex;
       flex-direction: column;
@@ -89,46 +84,54 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--ojjem-teal);
       display: block;
       margin-bottom: 1.25rem;
     }
 
-    .ojjem-hero-headline .script-line {
-      display: block;
+    .ojjem-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      color: var(--cream);
+      font-kerning: none;
+      font-feature-settings: 'kern' 0;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .ojjem-hero-subtitle {
       font-family: 'Lora', serif;
       font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.1rem, 2vw, 1.45rem);
-      color: rgba(30,19,12,0.38);
-      line-height: 1.4;
-      margin-bottom: 0.35em;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      color: rgba(245,240,232,0.55);
+      margin-bottom: 1.75rem;
     }
 
-    .ojjem-hero-headline .bold-line {
-      display: block;
-      font-size: clamp(1.5rem, 2.6vw, 2.4rem);
-      color: var(--espresso);
-      text-transform: uppercase;
-      /* Erft font-family, font-weight, line-height en letter-spacing van globale h1 */
-    }
-
-    .ojjem-hero .hero-sub {
-      color: rgba(30,19,12,0.58);
+    .ojjem-hero-desc {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       line-height: 1.8;
-      margin: 1.75rem 0 0;
-      max-width: 38ch;
+      color: rgba(245,240,232,0.65);
+      max-width: 36ch;
+      margin-bottom: 0.75rem;
     }
 
-    .ojjem-pills--hero {
+    .ojjem-hero-after {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(245,240,232,0.5);
+      max-width: 36ch;
+      margin-bottom: 2rem;
+    }
+
+    .ojjem-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 2rem;
+      margin-bottom: 2.25rem;
     }
 
     .ojjem-pill {
@@ -139,146 +142,266 @@
       text-transform: uppercase;
       padding: 0.4rem 0.9rem;
       border-radius: 999px;
-      border: 1.5px solid var(--ojjem-teal);
+      border: 1.5px solid rgba(26,143,160,0.5);
       color: var(--ojjem-teal);
-      background: transparent;
+      background: rgba(26,143,160,0.08);
     }
 
-    /* ── CONTENT BLOK: gecentreerd, één geheel ── */
-    .ojjem-content-block {
-      background: var(--blush);
-      border-top: 1px solid rgba(30,19,12,0.09);
-      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 5rem);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .ojjem-content-block h2 {
-      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-      color: var(--espresso);
-      max-width: 34ch;
-      margin: 0 0 1.25rem;
-      /* Erft font-family, font-weight, line-height en letter-spacing van globale h2 */
-    }
-
-    .ojjem-content-block p {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.98rem;
-      line-height: 1.85;
-      color: rgba(30,19,12,0.62);
-      max-width: 52ch;
-      margin: 0 0 1rem;
-    }
-
-    .ojjem-content-block .btn-teal {
-      margin-top: 1.5rem;
-    }
-
-    .ojjem-two-col-block--right {
-      border-left: 1px solid rgba(30,19,12,0.09);
-    }
-
-    .ojjem-block-rule {
-      width: 28px;
-      height: 2px;
-      border: none;
+    .btn-teal {
       background: var(--ojjem-teal);
-      margin: 0 auto 1.5rem;
-      flex-shrink: 0;
+      color: var(--cream);
+    }
+    .btn-teal:hover { background: #157080; }
+
+    /* ── SECTIE 1: Ons eigen huisshotje ── */
+    .ojjem-story {
+      background: var(--blush);
+      border-top: 4px solid var(--ojjem-teal);
+    }
+    .ojjem-story-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+      padding: clamp(4rem, 7vw, 7rem) var(--pad);
     }
 
-    .ojjem-block-eyebrow {
+    .ojjem-story-label {
+      display: inline-block;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--ojjem-teal);
-      display: block;
+      margin-bottom: 1.1rem;
+    }
+
+    .ojjem-story h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      color: var(--espresso);
+      margin-bottom: 1.5rem;
+      max-width: 22ch;
+    }
+
+    .ojjem-story p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(30,19,12,0.68);
+      max-width: 44ch;
       margin-bottom: 1rem;
     }
 
-    .ojjem-two-col-block h2 {
+    /* Decoratieve quote/kaartje rechts */
+    .ojjem-story-card {
+      background: var(--espresso);
+      padding: clamp(2.5rem, 4vw, 3.5rem);
+      position: relative;
+    }
+
+    .ojjem-story-card::before {
+      content: '"';
       font-family: 'Lora', serif;
-      font-size: clamp(1.35rem, 1.8vw, 1.75rem);
-      font-weight: 700;
-      line-height: 1.3;
-      color: var(--espresso);
-      max-width: 26ch;
-      margin: 0 0 1.1rem;
-      font-kerning: none;
-      font-feature-settings: "kern" 0;
+      font-size: 8rem;
+      color: var(--ojjem-teal);
+      opacity: 0.2;
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      line-height: 1;
     }
 
-    .ojjem-two-col-block p {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.92rem;
-      line-height: 1.85;
-      color: rgba(30,19,12,0.6);
-      max-width: 40ch;
-      margin: 0 0 2.5rem;
-    }
-
-    .ojjem-two-col-block .btn-teal { margin-top: auto; }
-
-    .ojjem-spacer {
-      display: block;
-      margin-top: auto;
-      height: 2.75rem;
-      flex-shrink: 0;
-    }
-
-    .btn-teal {
-      background: var(--ojjem-teal);
+    .ojjem-story-card p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
       color: var(--cream);
-      border-color: var(--ojjem-teal);
+      line-height: 1.7;
+      margin: 0;
+      max-width: none;
+      position: relative;
+      z-index: 1;
     }
-    .btn-teal:hover { background: #157080; border-color: #157080; }
+
+    .ojjem-story-card cite {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-top: 1.5rem;
+    }
+
+    /* ── SECTIE 2: Wanneer ── */
+    .ojjem-wanneer {
+      background: var(--espresso);
+      padding: clamp(4rem, 7vw, 7rem) var(--pad);
+    }
+
+    .ojjem-wanneer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .ojjem-wanneer-header {
+      text-align: center;
+      margin-bottom: clamp(2.5rem, 4vw, 4rem);
+    }
+
+    .ojjem-wanneer-header span {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-bottom: 1rem;
+    }
+
+    .ojjem-wanneer-header h2 {
+      color: var(--cream);
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    }
+
+    .ojjem-wanneer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .ojjem-wanneer-card {
+      background: rgba(245,240,232,0.05);
+      border: 1px solid rgba(245,240,232,0.1);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+    }
+
+    .ojjem-wanneer-nr {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--ojjem-teal);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .ojjem-wanneer-card p {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgba(245,240,232,0.72);
+    }
+
+    .ojjem-wanneer-outro {
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      color: rgba(245,240,232,0.5);
+    }
+
+    /* ── SECTIE 3: Alleen bij De Kletser ── */
+    .ojjem-cta {
+      background: var(--blush);
+      border-top: 1px solid rgba(30,19,12,0.08);
+      border-bottom: 1px solid rgba(30,19,12,0.08);
+      padding: clamp(4rem, 7vw, 7rem) var(--pad);
+      text-align: center;
+    }
+
+    .ojjem-cta-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .ojjem-cta span {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-bottom: 1.1rem;
+    }
+
+    .ojjem-cta h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      color: var(--espresso);
+      margin-bottom: 1.25rem;
+    }
+
+    .ojjem-cta p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(30,19,12,0.65);
+      margin-bottom: 2rem;
+    }
+
+    .ojjem-cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .ojjem-slogan {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: rgba(30,19,12,0.35);
+    }
 
     /* ── MOBIEL ── */
+    @media (max-width: 900px) {
+      .ojjem-story-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .ojjem-story h2 { max-width: none; }
+      .ojjem-story p { max-width: none; }
+      .ojjem-wanneer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
-      /* Hero: foto bovenaan, geen padding-top op de afbeelding */
       .ojjem-hero {
         grid-template-columns: 1fr;
         min-height: auto;
-        margin-top: clamp(5rem, 12vw, 7rem); /* ruimte voor announcement + nav */
+        margin-top: clamp(5rem, 12vw, 7rem);
       }
-
-      /* Foto: volledige breedte, goede hoogte, niet afgesneden */
-      .ojjem-product-photo {
-        height: 80vw;
-        min-height: 300px;
-        object-position: center top;
+      .ojjem-left {
+        height: 70vw;
+        min-height: 280px;
       }
-
-      /* Tekst: geen grote padding-top nodig — nav staat boven de foto */
+      .ojjem-left::after {
+        top: auto; right: 0; left: 0; bottom: 0;
+        width: auto;
+        height: 4px;
+      }
+      .ojjem-product-photo { height: 100%; }
       .ojjem-hero-text {
-        padding: 2rem 1.5rem 2.5rem;
-        text-align: center;
+        padding: 2.5rem 1.5rem 3rem;
+        background: var(--espresso);
       }
+      .ojjem-hero-desc,
+      .ojjem-hero-after { max-width: 100%; }
+    }
 
-      .ojjem-hero .hero-sub { max-width: 100%; }
-      .ojjem-pills--hero { justify-content: center; }
-
-      /* Twee kolommen: onder elkaar, minder padding */
-      .ojjem-two-col-section { grid-template-columns: 1fr; }
-
-      .ojjem-two-col-block {
-        padding: 2.5rem 1.5rem;
+    @media (max-width: 640px) {
+      .ojjem-wanneer-grid {
+        grid-template-columns: 1fr;
       }
-
-      .ojjem-two-col-block--right {
-        border-left: none;
-        border-top: 1px solid rgba(30,19,12,0.09);
-      }
-
-      .ojjem-two-col-block h2,
-      .ojjem-two-col-block p { max-width: 100%; }
-
-      /* Spacer verbergen op mobiel — geen gelijke kolomhoogte nodig */
-      .ojjem-spacer { display: none; }
     }
   </style>
 </head>
@@ -333,13 +456,10 @@
 
 
 <!-- ══════════════════════════════
-     HERO
-     55/45 split: foto links domineert,
-     tekst rechts heeft ruimte
+     HERO: foto links, tekst rechts
 ══════════════════════════════ -->
 <section class="ojjem-hero">
 
-  <!-- Productfoto: vult de linkerkolom volledig -->
   <div class="ojjem-left">
     <img
       src="/brand_assets/frissen ojjem (productfoto).png"
@@ -348,28 +468,27 @@
     >
   </div>
 
-  <!-- Tekstkant: verticaal gecentreerd met interne ruimte -->
   <div class="ojjem-hero-text">
 
-    <!-- Supertag: merklabel boven de headline -->
-    <span class="ojjem-supertag">Frissen Ojjem</span>
+    <span class="ojjem-supertag">Huisshotje · De Kletser</span>
 
-    <!-- Headline -->
-    <h1 class="ojjem-hero-headline">
-      <span class="bold-line">Voor tijdens én<br>na het stappen.</span>
-    </h1>
+    <h1 style="font-kerning:none;font-feature-settings:'kern' 0;">Frissen&#8202;Ojjem</h1>
+    <p class="ojjem-hero-subtitle">Voor frisse praat en lange avonden.</p>
 
-    <!-- Subtekst -->
-    <p class="hero-sub">
+    <p class="ojjem-hero-desc">
       Ons eigen shotje met munt en pepermunt. Lichtzoet, verrassend fris en exclusief verkrijgbaar bij De Kletser.
     </p>
+    <p class="ojjem-hero-after">
+      Na een paar pilsjes, een portie bitterballen of een flinke dosis knoflooksaus? Dan is het tijd voor een Frissen&#8202;Ojjem.
+    </p>
 
-    <!-- Pills -->
-    <div class="ojjem-pills--hero">
+    <div class="ojjem-pills">
       <span class="ojjem-pill">20% alcohol</span>
+      <span class="ojjem-pill">€ 3,00</span>
       <span class="ojjem-pill">Alleen bij De Kletser</span>
     </div>
 
+    <a href="/contact" class="btn btn-teal">Kom 'm proeven</a>
 
   </div>
 
@@ -377,19 +496,85 @@
 
 
 <!-- ══════════════════════════════
-     VERHAAL + EXCLUSIVITEIT — gecentreerd
+     SECTIE 1: Ons eigen huisshotje
 ══════════════════════════════ -->
-<section class="ojjem-content-block">
-  <hr class="ojjem-block-rule">
-  <span class="ojjem-block-eyebrow">Hoe het begon</span>
-  <h2 style="font-kerning:none;font-feature-settings:'kern' 0;">Na een paar biertjes, een portie bitterballen of een flinke dosis knoflooksaus? Dan is het tijd voor een Frissen&#8202;Ojjem.</h2>
-  <p>
-    Wat begon als een idee aan de bar groeide uit tot ons eigen huisshotje. Verfrissend, lichtzoet en nét anders dan de rest.
-  </p>
-  <p>
-    Met munt en pepermunt zorgt Frissen Ojjem voor een frisse smaak die perfect past bij een lange avond in het café.
-  </p>
-  <a href="/contact" class="btn btn-teal">Kom proeven</a>
+<section class="ojjem-story">
+  <div class="ojjem-story-inner">
+
+    <div>
+      <span class="ojjem-story-label">Het verhaal</span>
+      <h2>Ons eigen huisshotje</h2>
+      <p>
+        Wat begon als een idee aan de bar, groeide uit tot een shotje dat precies bij De Kletser past: fris, eigenwijs en niet te ingewikkeld.
+      </p>
+      <p>
+        Frissen&#8202;Ojjem heeft die herkenbare frisse smaak van munt en pepermunt, met een lichtzoete afdronk. Perfect als tussendoortje tijdens een lange avond of als afsluiter voordat je weer naar huis gaat.
+      </p>
+    </div>
+
+    <div class="ojjem-story-card">
+      <p>
+        Fris in de mond, gezellig in de kop.
+      </p>
+      <cite>— Frissen&#8202;Ojjem</cite>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     SECTIE 2: Wanneer is het tijd?
+══════════════════════════════ -->
+<section class="ojjem-wanneer">
+  <div class="ojjem-wanneer-inner">
+
+    <div class="ojjem-wanneer-header">
+      <span>Wanneer dan?</span>
+      <h2>Wanneer is het tijd voor Frissen&#8202;Ojjem?</h2>
+    </div>
+
+    <div class="ojjem-wanneer-grid">
+      <div class="ojjem-wanneer-card">
+        <div class="ojjem-wanneer-nr">01</div>
+        <p>Na een rondje bitterballen.</p>
+      </div>
+      <div class="ojjem-wanneer-card">
+        <div class="ojjem-wanneer-nr">02</div>
+        <p>Na een iets te enthousiaste hap knoflooksaus.</p>
+      </div>
+      <div class="ojjem-wanneer-card">
+        <div class="ojjem-wanneer-nr">03</div>
+        <p>Na "we doen er nog eentje".</p>
+      </div>
+      <div class="ojjem-wanneer-card">
+        <div class="ojjem-wanneer-nr">04</div>
+        <p>Of gewoon omdat je zin hebt in iets fris.</p>
+      </div>
+    </div>
+
+    <p class="ojjem-wanneer-outro">Kortom: voor tijdens én na het stappen.</p>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     SECTIE 3: Alleen bij De Kletser
+══════════════════════════════ -->
+<section class="ojjem-cta">
+  <div class="ojjem-cta-inner">
+    <span>Exclusief verkrijgbaar</span>
+    <h2>Alleen bij De Kletser</h2>
+    <p>
+      Frissen&#8202;Ojjem is exclusief verkrijgbaar bij De Kletser in Horst. Dus schuif aan, bestel een rondje en proef ons eigen huisshotje zelf.
+    </p>
+    <div class="ojjem-cta-buttons">
+      <a href="/menu" class="btn btn-terracotta">Bekijk onze kaart</a>
+      <a href="/contact" class="btn btn-outline" style="color: var(--espresso); border-color: rgba(30,19,12,0.3);">Kom langs</a>
+    </div>
+    <p class="ojjem-slogan">Frissen&#8202;Ojjem: fris in de mond, gezellig in de kop.</p>
+  </div>
 </section>
 
 
