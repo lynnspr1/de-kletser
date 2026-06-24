@@ -43,12 +43,18 @@
       padding-bottom: 0.75rem !important;
     }
 
+    /* ── HERO wrapper voor adempauze boven en onder ── */
+    .ojjem-hero-wrap {
+      background: var(--espresso);
+      padding: clamp(4.5rem, 7vw, 6rem) 0 clamp(3rem, 5vw, 4.5rem);
+    }
+
     /* ── HERO ── */
     .ojjem-hero {
       display: grid;
       grid-template-columns: 55fr 45fr;
-      min-height: 100vh;
-      max-height: 100vh;
+      min-height: 80vh;
+      max-height: 88vh;
       background: var(--espresso);
       overflow: hidden;
     }
@@ -378,10 +384,13 @@
     }
 
     @media (max-width: 768px) {
+      .ojjem-hero-wrap {
+        padding: clamp(5rem, 12vw, 7rem) 0 clamp(2rem, 4vw, 3rem);
+      }
       .ojjem-hero {
         grid-template-columns: 1fr;
         min-height: auto;
-        margin-top: clamp(5rem, 12vw, 7rem);
+        max-height: none;
       }
       .ojjem-left {
         height: 100vw;
@@ -461,6 +470,7 @@
 <!-- ══════════════════════════════
      HERO: foto links, tekst rechts
 ══════════════════════════════ -->
+<div class="ojjem-hero-wrap">
 <section class="ojjem-hero">
 
   <div class="ojjem-left">
@@ -499,6 +509,7 @@
   </div>
 
 </section>
+</div>
 
 
 <!-- ══════════════════════════════
