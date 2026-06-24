@@ -1,8 +1,14 @@
 // ── Sticky nav ──────────────────────────────
 const nav = document.getElementById('nav')
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60)
-}, { passive: true })
+const isMobile = () => window.innerWidth <= 640
+
+// Op mobiel altijd donker; op desktop donker na scrollen
+function updateNav() {
+  nav.classList.toggle('scrolled', isMobile() || window.scrollY > 60)
+}
+updateNav()
+window.addEventListener('scroll', updateNav, { passive: true })
+window.addEventListener('resize', updateNav, { passive: true })
 
 // ── Mobile hamburger ─────────────────────────
 const hamburger = document.getElementById('hamburger')
