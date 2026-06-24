@@ -953,6 +953,12 @@ footer {
   #nav {
     position: sticky;
     top: 0;
+    background: rgba(30,19,12,0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3) !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
   }
 
   /* ── Hero secties: top-padding verlagen want nav zit nu in de flow ── */
