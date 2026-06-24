@@ -554,6 +554,16 @@ img { display: block; max-width: 100%; }
 /* ═══════════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════════ */
+
+/* Pagina-specifieke top-padding (desktop: ruimte voor vaste nav) */
+.menu-section--page { padding-top: clamp(8rem, 12vw, 10rem); }
+.contact-section--page { padding-top: clamp(8rem, 12vw, 11rem); }
+
+@media (max-width: 640px) {
+  .menu-section--page  { padding-top: 2rem; }
+  .contact-section--page { padding-top: 2rem; }
+}
+
 .contact-section {
   background: var(--espresso);
   padding: clamp(4rem, 7vw, 7rem) var(--pad);
@@ -932,9 +942,26 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .announcement-bar { padding: 0.5rem 1rem; }
+  /* ── Header structuur op mobiel: in documentflow, geen overlap ── */
+  .announcement-bar {
+    position: relative;
+    padding: 0.65rem 1rem;
+    z-index: 300;
+  }
   .announcement-link { font-size: 0.75rem; text-align: center; line-height: 1.5; }
-  #nav { top: 2.5rem; }
+
+  #nav {
+    position: sticky;
+    top: 0;
+  }
+
+  /* ── Hero secties: top-padding verlagen want nav zit nu in de flow ── */
+  .hero { padding-top: 2.5rem; }
+  .jobs-hero { padding-top: 2.5rem; }
+
+  /* ── Menu categorie-nav: sticky top aanpassen aan nieuwe navhoogte ── */
+  .menu-cat-nav { top: 3.5rem; }
+
   .hamburger { display: flex; }
   .nav-links {
     position: fixed;
