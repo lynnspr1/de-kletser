@@ -2,13 +2,8 @@
 const nav = document.getElementById('nav')
 const isMobile = () => window.innerWidth <= 640
 
-// Op mobiel altijd donker; op desktop donker na scrollen
-function updateNav() {
-  nav.classList.toggle('scrolled', isMobile() || window.scrollY > 60)
-}
-updateNav()
-window.addEventListener('scroll', updateNav, { passive: true })
-window.addEventListener('resize', updateNav, { passive: true })
+// Nav altijd donker op alle schermformaten
+nav.classList.add('scrolled')
 
 // ── Mobile hamburger ─────────────────────────
 const hamburger = document.getElementById('hamburger')
