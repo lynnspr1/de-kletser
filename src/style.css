@@ -555,18 +555,18 @@ img { display: block; max-width: 100%; }
    CONTACT
 ═══════════════════════════════════════════ */
 
+.contact-section {
+  background: var(--espresso);
+  padding: clamp(4rem, 7vw, 7rem) var(--pad);
+}
+
 /* Pagina-specifieke top-padding (desktop: ruimte voor vaste nav) */
 .menu-section--page { padding-top: clamp(8rem, 12vw, 10rem); }
 .contact-section--page { padding-top: clamp(8rem, 12vw, 11rem); }
 
 @media (max-width: 640px) {
-  .menu-section--page  { padding-top: 2rem; }
-  .contact-section--page { padding-top: 2rem; }
-}
-
-.contact-section {
-  background: var(--espresso);
-  padding: clamp(4rem, 7vw, 7rem) var(--pad);
+  .menu-section--page  { padding-top: 3rem; }
+  .contact-section--page { padding-top: 3rem; }
 }
 .contact-inner {
   max-width: var(--max);
