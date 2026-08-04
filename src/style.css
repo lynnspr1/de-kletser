@@ -263,6 +263,9 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-sub {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
   color: rgba(245,240,232,0.82);
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   max-width: 520px;
@@ -315,6 +318,11 @@ img { display: block; max-width: 100%; }
   gap: 1rem;
 }
 .over-content h2 { color: var(--espresso); }
+.over-content h3 {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--espresso);
+  margin-top: 0.25rem;
+}
 .over-content p {
   font-size: 0.95rem;
   line-height: 1.75;
@@ -339,6 +347,13 @@ img { display: block; max-width: 100%; }
   margin-bottom: 3rem;
 }
 .menu-header h2 { color: var(--espresso); }
+.menu-header p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(30,19,12,0.72);
+  max-width: 560px;
+  margin-top: 0.5rem;
+}
 
 .menu-grid {
   display: grid;
