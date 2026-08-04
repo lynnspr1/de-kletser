@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font vergelijking — De Kletser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #F5F0E8; color: #1E130C; font-family: 'Space Grotesk', sans-serif; }
+
+    .label {
+      background: #1E130C;
+      color: #F5F0E8;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .label span {
+      opacity: 0.5;
+      font-size: 0.65rem;
+      margin-left: 0.5rem;
+    }
+
+    .option {
+      border-bottom: 3px solid #1E130C;
+    }
+
+    .card {
+      background: #1E130C;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .card .eyebrow {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #B5522A;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .card h1 {
+      color: #F5F0E8;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: rgba(245,240,232,0.6);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* Font opties */
+    .font-1 h1 { font-family: 'Alegreya Sans', serif; font-weight: 700; }
+    .font-2 h1 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    .font-3 h1 { font-family: 'Lora', serif; font-weight: 700; }
+    .font-4 h1 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+
+    .current-badge {
+      display: inline-block;
+      background: #B5522A;
+      color: #F5F0E8;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="background:#B5522A; color:#F5F0E8; text-align:center; padding:1rem; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; letter-spacing:0.05em;">
+    Font vergelijking voor De Kletser — scroll om te vergelijken
+  </div>
+
+  <!-- Optie 1: Alegreya Sans (huidig) -->
+  <div class="option">
+    <div class="label">Optie 1 — Alegreya Sans <span class="current-badge">huidig</span></div>
+    <div class="card font-1">
+      <span class="eyebrow">Café in Horst</span>
+      <h1>De Kletser</h1>
+      <p>Dé stamkroeg in het centrum van Horst. Koffie, speciaalbier, wijn, cocktails en borrelhapjes. Iedereen is welkom.</p>
+    </div>
+  </div>
+
+  <!-- Optie 2: Playfair Display -->
+  <div class="option">
+    <div class="label">Optie 2 — Playfair Display <span style="opacity:0.5;font-size:0.65rem;margin-left:0.5rem">Eleganter, klassiek</span></div>
+    <div class="card font-2">
+      <span class="eyebrow">Café in Horst</span>
+      <h1>De Kletser</h1>
+      <p>Dé stamkroeg in het centrum van Horst. Koffie, speciaalbier, wijn, cocktails en borrelhapjes. Iedereen is welkom.</p>
+    </div>
+  </div>
+
+  <!-- Optie 3: Lora -->
+  <div class="option">
+    <div class="label">Optie 3 — Lora <span style="opacity:0.5;font-size:0.65rem;margin-left:0.5rem">Warmer, journalistiek</span></div>
+    <div class="card font-3">
+      <span class="eyebrow">Café in Horst</span>
+      <h1>De Kletser</h1>
+      <p>Dé stamkroeg in het centrum van Horst. Koffie, speciaalbier, wijn, cocktails en borrelhapjes. Iedereen is welkom.</p>
+    </div>
+  </div>
+
+  <!-- Optie 4: DM Serif Display -->
+  <div class="option">
+    <div class="label">Optie 4 — DM Serif Display <span style="opacity:0.5;font-size:0.65rem;margin-left:0.5rem">Sterk, eigentijds</span></div>
+    <div class="card font-4">
+      <span class="eyebrow">Café in Horst</span>
+      <h1>De Kletser</h1>
+      <p>Dé stamkroeg in het centrum van Horst. Koffie, speciaalbier, wijn, cocktails en borrelhapjes. Iedereen is welkom.</p>
+    </div>
+  </div>
+
+  <div style="background:#1E130C; color:rgba(245,240,232,0.4); text-align:center; padding:1.5rem; font-family:'Space Grotesk',sans-serif; font-size:0.8rem;">
+    Welke voelt het meest als De Kletser?
+  </div>
+
+</body>
+</html>

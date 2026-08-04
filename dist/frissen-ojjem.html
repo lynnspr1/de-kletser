@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── Primary SEO ── -->
+  <title>Frissen Ojjem | Huisshotje van De Kletser</title>
+  <meta name="title" content="Frissen Ojjem | Huisshotje van De Kletser">
+  <meta name="description" content="Frissen Ojjem is het eigen huisshotje van De Kletser in Horst. Munt, pepermunt, lichtzoet en exclusief verkrijgbaar op het Wilhelminaplein.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.dekletser.nl/frissen-ojjem">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dekletser.nl/frissen-ojjem">
+  <meta property="og:site_name" content="De Kletser">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Frissen Ojjem — het verfrissende shotje van De Kletser">
+  <meta property="og:description" content="Munt, pepermunt en een lichte kick. Exclusief verkrijgbaar bij De Kletser in Horst.">
+  <meta property="og:image" content="https://www.dekletser.nl/brand_assets/frissen ojjem (productfoto).png">
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/png" href="/brand_assets/logo-badge-opt.png">
+  <link rel="apple-touch-icon" href="/brand_assets/logo-badge-opt.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    :root { --ojjem-teal: #1a8fa0; }
+
+    /* Nav altijd donker op deze pagina */
+    #nav {
+      background: rgba(30,19,12,0.95) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3) !important;
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+    }
+
+    /* ── HERO wrapper: geen padding op desktop ── */
+    .ojjem-hero-wrap {
+      background: var(--espresso);
+    }
+
+    /* ── HERO ── */
+    .ojjem-hero {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      min-height: 100vh;
+      max-height: 100vh;
+      background: var(--espresso);
+      overflow: hidden;
+    }
+
+    .ojjem-left {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ojjem-product-photo {
+      width: 100%;
+      height: 100%;
+      max-height: 100vh;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    /* Subtiele teal accentlijn rechts van de foto */
+    .ojjem-left::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 4px;
+      background: var(--ojjem-teal);
+    }
+
+    .ojjem-hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(5.5rem, 8vw, 7rem) clamp(2.5rem, 5vw, 5rem) clamp(2.5rem, 4vw, 4rem);
+    }
+
+    .ojjem-supertag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+
+    .ojjem-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      color: var(--cream);
+      font-kerning: none;
+      font-feature-settings: 'kern' 0;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .ojjem-hero-subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      color: rgba(245,240,232,0.55);
+      margin-bottom: 1.75rem;
+    }
+
+    .ojjem-hero-desc {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(245,240,232,0.65);
+      max-width: 36ch;
+      margin-bottom: 0.75rem;
+    }
+
+    .ojjem-hero-after {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(245,240,232,0.5);
+      max-width: 36ch;
+      margin-bottom: 2rem;
+    }
+
+    .ojjem-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .ojjem-pill {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1.5px solid rgba(26,143,160,0.5);
+      color: var(--ojjem-teal);
+      background: rgba(26,143,160,0.08);
+    }
+
+    .btn-teal {
+      background: var(--ojjem-teal);
+      color: var(--cream);
+    }
+    .btn-teal:hover { background: #157080; }
+
+    /* ── SECTIE 1: Ons eigen huisshotje ── */
+    .ojjem-story {
+      background: var(--blush);
+      border-top: 4px solid var(--ojjem-teal);
+    }
+    .ojjem-story-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+      padding: clamp(4rem, 7vw, 7rem) var(--pad);
+    }
+
+    .ojjem-story-label {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-bottom: 1.1rem;
+    }
+
+    .ojjem-story h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      color: var(--espresso);
+      margin-bottom: 1.5rem;
+      max-width: 22ch;
+    }
+
+    .ojjem-story p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(30,19,12,0.68);
+      max-width: 44ch;
+      margin-bottom: 1rem;
+    }
+
+    /* Decoratieve quote/kaartje rechts */
+    .ojjem-story-card {
+      background: var(--espresso);
+      padding: clamp(2.5rem, 4vw, 3.5rem);
+      position: relative;
+    }
+
+    .ojjem-story-card::before {
+      content: '"';
+      font-family: 'Lora', serif;
+      font-size: 8rem;
+      color: var(--ojjem-teal);
+      opacity: 0.2;
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      line-height: 1;
+    }
+
+    .ojjem-story-card p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      color: var(--cream);
+      line-height: 1.7;
+      margin: 0;
+      max-width: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ojjem-story-card cite {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-top: 1.5rem;
+    }
+
+    /* ── SECTIE 2: Wanneer ── */
+    .ojjem-wanneer {
+      background: var(--espresso);
+      padding: clamp(4rem, 7vw, 7rem) var(--pad);
+    }
+
+    .ojjem-wanneer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .ojjem-wanneer-header {
+      text-align: center;
+      margin-bottom: clamp(2.5rem, 4vw, 4rem);
+    }
+
+    .ojjem-wanneer-header span {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-bottom: 1rem;
+    }
+
+    .ojjem-wanneer-header h2 {
+      color: var(--cream);
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    }
+
+    .ojjem-wanneer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .ojjem-wanneer-card {
+      background: rgba(245,240,232,0.05);
+      border: 1px solid rgba(245,240,232,0.1);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+    }
+
+    .ojjem-wanneer-nr {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--ojjem-teal);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .ojjem-wanneer-card p {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgba(245,240,232,0.72);
+    }
+
+    .ojjem-wanneer-outro {
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      color: rgba(245,240,232,0.5);
+    }
+
+    /* ── SECTIE 3: Alleen bij De Kletser ── */
+    .ojjem-cta {
+      background: var(--blush);
+      border-top: 1px solid rgba(30,19,12,0.08);
+      border-bottom: 1px solid rgba(30,19,12,0.08);
+      padding: clamp(4rem, 7vw, 7rem) var(--pad);
+      text-align: center;
+    }
+
+    .ojjem-cta-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .ojjem-cta span {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ojjem-teal);
+      margin-bottom: 1.1rem;
+    }
+
+    .ojjem-cta h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      color: var(--espresso);
+      margin-bottom: 1.25rem;
+    }
+
+    .ojjem-cta p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(30,19,12,0.65);
+      margin-bottom: 2rem;
+    }
+
+    .ojjem-cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .ojjem-slogan {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: rgba(30,19,12,0.35);
+    }
+
+    /* ── MOBIEL ── */
+    @media (max-width: 900px) {
+      .ojjem-story-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .ojjem-story h2 { max-width: none; }
+      .ojjem-story p { max-width: none; }
+      .ojjem-wanneer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ojjem-hero-wrap {
+        padding: 0 0 clamp(2.5rem, 5vw, 4rem);
+      }
+      .ojjem-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        max-height: none;
+      }
+      .ojjem-left {
+        height: 100vw;
+        min-height: 380px;
+      }
+      .ojjem-left::after {
+        top: auto; right: 0; left: 0; bottom: 0;
+        width: auto;
+        height: 4px;
+      }
+      .ojjem-product-photo { height: 100%; object-position: center 80%; }
+      .ojjem-hero-text {
+        padding: 2.5rem 1.5rem 3rem;
+        background: var(--espresso);
+      }
+      .ojjem-hero-desc,
+      .ojjem-hero-after { max-width: 100%; }
+    }
+
+    @media (max-width: 640px) {
+      .ojjem-wanneer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/main-DcZb3q7l.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DF2rdrfY.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     ANNOUNCEMENT BAR
+══════════════════════════════ -->
+<div class="announcement-bar">
+  <a href="/#contact" class="announcement-link">
+    Deze zomer extra vaak geopend!
+  </a>
+</div>
+
+<!-- ══════════════════════════════
+     NAVIGATIE
+══════════════════════════════ -->
+<nav id="nav" class="scrolled">
+  <a href="/" class="nav-logo" aria-label="De Kletser — Home">
+    <picture>
+      <source srcset="/brand_assets/logo-wordmark.webp" type="image/webp">
+      <img src="/brand_assets/logo-wordmark-opt.png" alt="De Kletser" width="400" height="144" fetchpriority="high">
+    </picture>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="/"               class="nav-link">Home</a>
+    <a href="/menu"           class="nav-link">Menu</a>
+    <a href="/contact"        class="nav-link">Contact</a>
+    <a href="/werken-bij"     class="nav-link">Werken bij</a>
+    <a href="/frissen-ojjem"  class="nav-link nav-link--active">Frissen Ojjem</a>
+
+    <div class="social-links social-links--nav">
+      <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/proeflokaalvanhorst/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@cafedekletser?_r=1&_t=ZG-95Vpi0ySQYT&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnl-PssM-K5PHSwo9crOva-SW37HE3c37mLm_ooIB8N7fNUlMYQF7Bwu2Thxc_aem_GePVV2t2chXgPjhhZ7CNOg" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+
+<!-- ══════════════════════════════
+     HERO: foto links, tekst rechts
+══════════════════════════════ -->
+<div class="ojjem-hero-wrap">
+<section class="ojjem-hero">
+
+  <div class="ojjem-left">
+    <picture>
+      <source media="(max-width: 768px)" srcset="/assets/shotjes-foto-D_xPx8kE.png">
+      <img
+        src="/assets/shotjes-foto-D_xPx8kE.png"
+        alt="Frissen Ojjem shotjes op een dienblad"
+        class="ojjem-product-photo"
+      >
+    </picture>
+  </div>
+
+  <div class="ojjem-hero-text">
+
+    <span class="ojjem-supertag">Huisshotje · De Kletser</span>
+
+    <h1 style="font-kerning:none;font-feature-settings:'kern' 0;">Frissen&#8202;Ojjem</h1>
+
+
+    <p class="ojjem-hero-desc">
+      Ons eigen shotje met munt en pepermunt. Lichtzoet, verrassend fris en exclusief verkrijgbaar bij De Kletser.
+    </p>
+    <p class="ojjem-hero-after">
+      Na een paar pilsjes, een portie bitterballen of een flinke dosis knoflooksaus? Dan is het tijd voor een Frissen&#8202;Ojjem.
+    </p>
+
+    <div class="ojjem-pills">
+      <span class="ojjem-pill">20% alcohol</span>
+      <span class="ojjem-pill">€ 3,00</span>
+      <span class="ojjem-pill">Alleen bij De Kletser</span>
+    </div>
+
+    <a href="/contact" class="btn btn-teal">Kom 'm proeven</a>
+
+  </div>
+
+</section>
+</div>
+
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <picture>
+      <source srcset="/brand_assets/logo-wordmark.webp" type="image/webp">
+      <img class="footer-logo" src="/brand_assets/logo-wordmark-opt.png" alt="De Kletser" width="400" height="144" loading="lazy">
+    </picture>
+
+    <div class="social-links social-links--footer">
+      <a href="https://www.instagram.com/cafedekletser?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/proeflokaalvanhorst/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@cafedekletser?_r=1&_t=ZG-95Vpi0ySQYT&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnl-PssM-K5PHSwo9crOva-SW37HE3c37mLm_ooIB8N7fNUlMYQF7Bwu2Thxc_aem_GePVV2t2chXgPjhhZ7CNOg" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      </a>
+    </div>
+
+    <p>Wilhelminaplein 13 · 5961 ES Horst</p>
+    <p class="footer-copy">© 2026 De Kletser — Alle rechten voorbehouden</p>
+  </div>
+</footer>
+
+</body>
+</html>
